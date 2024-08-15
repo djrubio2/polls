@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
     <style>
@@ -10,6 +9,9 @@
 body{
     font-family: 'Arimo',sans-serif;
 
+}
+#update{
+    font-family: 'Inconsolata';
 }
 
 table {
@@ -46,12 +48,35 @@ table {
             font-size: 5pt;
 
         }
+        #dVote,#rVote{
+            font-size: 30pt;
+            font-weight: bold;
+        }
+        #dVote{
+            color:#2798da;
+        }
+        #rVote{
+            color:#ff352c;
+        }
     </style>
 </head>
 <body>
 <h1>Polling Average</h1>
+<p id="update">Last updated: 8-15-2024</p>
 <h2>Presidential Race</h2>
 <p>States will be added as polling comes in.</p>
+<h3>The Big Number - National Polling Average</h3>
+<div>
+    <div>
+        <div>Harris</div>
+        <div id="dVote">47.52</div>
+    </div>
+    <div>
+        <div>Trump</div>
+        <div id="rVote">45.35</div>
+
+    </div>
+</div>
 
 <div id="polling-table"></div>
 
@@ -92,14 +117,7 @@ console.log(colorScaleD(5))
                 .data(["State", "Margin", "Harris", "Trump"])
                 .enter()
                 .append("th")
-                .text(d => d)
-                .on("click", function(d, i) {
-                    // Sort the table when a header is clicked
-                    const isAscending = d3.select(this).classed("sort-asc");
-                    headers.classed("sort-asc", false).classed("sort-desc", false);
-                    d3.select(this).classed(isAscending ? "sort-desc" : "sort-asc", true);
-                    sortTable(i, !isAscending, data);
-                });
+                .text(d => d);
 
             // Create the table body
             const tbody = table.append("tbody");

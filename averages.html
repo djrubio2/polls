@@ -7,7 +7,9 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@200..900&display=swap');
-
+body{
+    font-family: 'Arimo';
+}
         table {
             border-collapse: collapse;
             width: 100%;
@@ -24,6 +26,9 @@
         td:nth-child(1){
             font-weight: bold;
             font-family: 'Arimo';
+        }
+        td:nth-child(2){
+            font-weight: bold;
         }
         th {
             font-family: 'Arimo';
@@ -45,76 +50,138 @@
 
 <div id="polling-table"></div>
 
+<h2>Close States</h2>
+<div id="close-margins-table"></div>
+
+<h2>All Other States</h2>
+<div id="other-states-table"></div>
 
 <script>
     // Load data from CSV file
     d3.csv("state_averages.csv").then(function(pollingData) {
+        const colorScaleD = d3.scaleLinear()
+            .domain([30, 70])  // Assuming the polling averages range from 0 to 100
+            .range(["white", "#2798da"]);  // Red for lower values, green for higher values
+        const colorScaleR = d3.scaleLinear()
+            .domain([30, 70])  // Assuming the polling averages range from 0 to 100
+            .range(["white", "#ff352c"]);  // Red for lower values, green for higher values
+        const colorScaleSplit = d3.scaleDiverging()
+        .domain([-20,0,20])
+        .range(["red", "black","blue"]);
+ // Split data into two groups: within +/- 5 margin and others
+ const closeMargins = pollingData.filter(d => Math.abs(+d.Margin) <= 5);
+const otherStates = pollingData.filter(d => Math.abs(+d.Margin) > 5);
 
+
+console.log(colorScaleD(5))
         // Create the table element
-        const table = d3.select("#polling-table").append("table");
+  // Function to create a table
+  function createTable(containerId, data) {
+            // Create the table element
+            const table = d3.select(containerId).append("table");
 
-        // Create the table header
-        const thead = table.append("thead");
-        const headers = thead.append("tr")
-            .selectAll("th")
-            .data(["State", "Margin","Harris","Trump"])
-            .enter()
-            .append("th")
-            .text(d => d)
-            .on("click", function(d, i) {
-                // Sort the table when a header is clicked
-                const isAscending = d3.select(this).classed("sort-asc");
-                headers.classed("sort-asc", false).classed("sort-desc", false);
-                d3.select(this).classed(isAscending ? "sort-desc" : "sort-asc", true);
-                sortTable(i, !isAscending);
-            });
+            // Create the table header
+            const thead = table.append("thead");
+            const headers = thead.append("tr")
+                .selectAll("th")
+                .data(["State", "Margin", "Harris", "Trump"])
+                .enter()
+                .append("th")
+                .text(d => d)
+                .on("click", function(d, i) {
+                    // Sort the table when a header is clicked
+                    const isAscending = d3.select(this).classed("sort-asc");
+                    headers.classed("sort-asc", false).classed("sort-desc", false);
+                    d3.select(this).classed(isAscending ? "sort-desc" : "sort-asc", true);
+                    sortTable(i, !isAscending, data);
+                });
 
-        // Create the table body
-        const tbody = table.append("tbody");
+            // Create the table body
+            const tbody = table.append("tbody");
 
-        // Function to update the rows
-        function updateRows(data) {
-            const rows = tbody.selectAll("tr")
-                .data(data)
-                .join("tr");
+            // Function to update the rows
+            function updateRows(data) {
+                const rows = tbody.selectAll("tr")
+                    .data(data)
+                    .join("tr");
 
             rows.selectAll("td")
                 .data(d => [d.State, d.Margin,d.Dem,d.GOP])
                 .join("td")
-                .text(d => d)
+                .text((d, i) => {
+                    if(i==1){
+                        if(d>0)
+                        {
+                            return "D+" + Math.abs(d)   
+                        }
+                        if(d<0){
+                            return "R+" + Math.abs(d)
+                        }
+                        return Math.abs(d)
+                    }
+                    else{
+
+                        return d
+                    }
+                    }
+                )
                 .style("color", (d, i) => {
-                    if (i === 1) { // Polling Average column
+                    if (i === 1) { // Margin column
                         const value = +d;
-                        if (value > 0) {
-                            return "blue";
-                        } else if (value < 0) {
-                            return "red";
-                        } else {
-                            return "red";
+                        if (value > 0){
+                            return "#2798da";
+                        }
+                        if (value < 0){
+                            return "#ff352c";
+                        }
+                        else{
+                            return "black"
                         }
                     }
                     return null;
-                });
+                })
+                .style("background-color", (d, i) => {
+                    if (i === 2) { // Polling Average column
+                        const value = +d;
+                        return colorScaleD(value);
+                    }
+                    if (i === 3) { // Polling Average column
+                        const value = +d;
+                        return colorScaleR(value);
+                    }
+                    return null;}
+                );
+
+            }
+
+            // Initial table population
+            updateRows(data);
+
+            // Sort the table data
+            function sortTable(index, ascending, tableData) {
+        tableData.sort((a, b) => {
+            if (index === 0) {  // Sort by State
+                return ascending ? d3.ascending(a.State, b.State) : d3.descending(a.State, b.State);
+            } else if (index === 1) {  // Sort by Margin
+                return ascending ? d3.ascending(+a.Dem, +b.Margin) : d3.descending(+a.Margin, +b.Margin);
+            } else if (index === 2) {  // Sort by Harris
+                return ascending ? d3.ascending(+a.Dem, +b.Harris) : d3.descending(+a.Dem, +b.Dem);
+            } else if (index === 3) {  // Sort by Trump
+                return ascending ? d3.ascending(+a.GOP, +b.GOP) : d3.descending(+a.GOP, +b.GOP);
+            }
+        });
+        updateRows(tableData);
+    }
         }
 
-        // Initial table population
-        updateRows(pollingData);
-
-        // Sort the table data
-        function sortTable(index, ascending) {
-            pollingData.sort((a, b) => {
-                if (index === 0) {  // Sort by Candidate
-                    return ascending ? d3.ascending(a.State, b.State) : d3.descending(a.State, b.State);
-                } else {  // Sort by Polling Average
-                    return ascending ? d3.ascending(+a.Margin, +b.Margin) : d3.descending(+a.Margin, +b.Margin);
-                }
-            });
-            updateRows(pollingData);
-        }
+        // Create both tables
+        createTable("#close-margins-table", closeMargins);
+        createTable("#other-states-table", otherStates);
 
     }).catch(function(error) {
         console.error('Error loading the CSV file:', error);
     });
+
 
 </script>
 
