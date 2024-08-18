@@ -1,0 +1,496 @@
+<head>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@200..900&display=swap');
+
+        body {
+            font-family: 'Arimo', sans-serif;
+
+        }
+
+        #update {
+            font-family: 'Inconsolata';
+        }
+
+        #map-holder{
+        padding: 50px;
+        }
+        .block {
+            font-family: 'Inconsolata', sans-serif;
+
+            display: inline-block;
+            height: 50px;
+            margin: 0px;
+            vertical-align: top;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            line-height: 50px;
+            border-radius: 0px;
+            color: black;
+            outline: 1px solid rgb(255, 255, 255);
+            z-index: 0;
+
+        }
+
+        .block:hover {
+            outline: 2px solid black;
+            z-index: 1;
+            opacity: .8;
+
+        }
+
+        .tick {
+            position: absolute;
+            border-left: 2px solid black;
+            height: 60px;
+            top: -5px;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 125px;
+            height: 95px;
+            padding: 5px;
+            background: #ffffff;
+            color: #fff;
+            border: 3px solid black;
+            color: black;
+            border-radius: 0px;
+            pointer-events: none;
+        }
+        #map-container{
+            width:95%;
+        }
+
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 125px;
+            height: 95px;
+            padding: 5px;
+            background: #ffffff;
+            color: #fff;
+            border: 3px solid black;
+            color: black;
+            border-radius: 0px;
+            pointer-events: none;
+        }
+
+        #EV {
+            font-family: "Inconsolata";
+            font-size: 9pt;
+        }
+
+        #d,
+        #r {
+            font-size: 10pt;
+        }
+
+        #d {
+            float: left;
+            font-weight: bold;
+            color: #2798da;
+            text-align: left;
+
+        }
+
+        #r {
+            float: right;
+            font-weight: bold;
+            color: red;
+            text-align: right;
+        }
+
+        #bar {
+            width: 100%;
+            height: 30px;
+            float: left;
+            display: inline-block;
+        }
+
+        #bar2 {
+            width: 100%;
+            height: 15px;
+        }
+        #topline{
+            width: 100%;
+            height:auto;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        #toplineD,
+        #toplineR,
+        #dSeatAvg,
+        #rSeatAvg {
+            font-size: 25pt;
+        }
+
+        
+        #demProb {
+            width: 50%;
+            height: 100%;
+            background-color: #2798da;
+            float: left;
+        }
+
+
+        #tieProb {
+            width: 0%;
+            height: 100%;
+            background-color: #8b8b8b;
+            background: repeating-linear-gradient(45deg,
+                    #525252,
+                    #525252 5px,
+                    #f5f5f5 5px,
+                    #f5f5f5 10px);
+            float: left;
+        }
+
+        #repProb {
+            width: 50%;
+            height: 100%;
+            background-color: #ff352c;
+            float: left;
+        }
+
+        .dem {
+            float: left;
+            color: #2798da;
+            font-size: 21pt;
+            font-weight: bold;
+        }
+
+        .gop {
+            float: right;
+            color: #ff352c;
+            font-size: 21pt;
+            text-align: right;
+            font-weight: bold;
+
+        }
+
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        td {
+            border-bottom: 1px solid rgb(34, 34, 34);
+            font-family: 'Inconsolata';
+
+        }
+
+        td:nth-child(1) {
+            font-weight: bold;
+            font-family: 'Arimo';
+        }
+
+        td:nth-child(2) {
+            font-weight: bold;
+        }
+
+        th {
+            font-family: 'Arimo';
+            background-color: #ffffff;
+            border-bottom: 2px solid rgb(34, 34, 34);
+        }
+
+        th.sort-asc::after {
+            content: " ▼";
+            font-size: 5pt;
+        }
+
+        th.sort-desc::after {
+            content: " ▲";
+            font-size: 5pt;
+
+        }
+
+        #dVote,
+        #rVote {
+            font-size: 30pt;
+            font-weight: bold;
+        }
+
+        #dVote {
+            color: #2798da;
+        }
+
+        #rVote {
+            color: #ff352c;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="topline">
+        <div id="top-container">
+            <h1 style="text-align:left">2024 Presidential Forecast</h1>
+            <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 8-15-24</span>
+            <hr>
+
+            <h3 style="text-align: left">Chance of winning a majority:</h3>
+            <div id="random">
+            </div>
+            <div class="dem">
+                <span style="color:#292929;font-size: 10pt;text-align:left;">Harris:</span>
+                <br>
+                <span id="toplineD" class="odometer">46</span><span>%</span>
+            </div>
+            <div class="gop">
+                <span style="color:#292929;font-size: 10pt;text-align:left;">Trump:</span>
+                <br>
+                <span id="toplineR" class="odometer">53</span><span>%</span>
+            </div>
+            <div id="bar-container">
+                <div id="bar">
+                    <div id="demProb"></div>
+                    <div id="tieProb"></div>
+                    <div id="repProb"></div>
+                </div>
+                <div class="dem">
+                    <span><span id="dSeatAvg" class="odometer">271</span></span>
+                    <br>
+                    <span style="color:#292929;font-size: 10pt;text-align:left;">Median Electoral Votes</span>
+                </div>
+                <div class="gop">
+                    <span><span id="rSeatAvg" class="odometer">266</span></span>
+                    <br>
+                    <span style="color:#292929;font-size: 10pt;text-align:left;">Median Electoral Votes</span>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div id="tools"></div>
+<div id="map-holder">
+    <div id="map-container"></div>
+
+</div>
+    <div id="chart"></div>
+
+</body>
+
+<script>
+    // Load the CSV data
+    const colorScale = d3.scaleThreshold()
+        .range(['#ff352c', '#ff6a54', '#ff927c', '#ffb8a6', '#ffdcd2', '#dceaf8', '#b9d4f1', '#93c0e9', '#68ace2', '#2798da'])
+        .domain([.1, .2, .3, .4, .5, .6, .7, .8, .9]);
+
+    d3.csv("output.csv").then(function (data) {
+        const avgEV = d3.sum(data, d => d.dem_prob/10000);
+        const avgEVR = d3.sum(data, d => d.gop_prob/10000);
+
+        const demProb = d3.sum(data, d=>{
+            if (d.dem_prob >= 270)
+            return 1
+        });
+        const repProb = d3.sum(data, d=>{
+            if (d.gop_prob >= 270)
+            return 1
+        });
+        const tieProb = d3.sum(data, d=>{
+            if (d.gop_prob == 269)
+            return 1
+        });
+
+        console.log(demProb/10000,repProb/10000,tieProb/10000)
+        console.log(avgEV, avgEVR)
+
+
+        d3.select("#rSeatAvg")
+                .html(d3.median(data,d=>d.gop_prob));
+        d3.select("#dSeatAvg")
+                .html(d3.median(data,d=>d.dem_prob));
+        d3.select("#toplineD")
+                .html(demProb/100);
+        d3.select("#toplineR")
+                .html(repProb/100);
+        d3.select("#demProb")
+                .style("width",demProb/100+"%");
+        d3.select("#repProb")
+                .style("width",repProb/100+"%");
+        d3.select("#tieProb")
+                .style("width",tieProb/100+"%");        
+        });
+        
+    
+
+    d3.csv("state_probs.csv").then(function (data) {
+
+        // Load the SVG map
+        d3.xml("newsvg.svg").then(function (xml) {
+
+            // Sort data by margin
+            data.sort((a, b) => d3.descending(a.dem_prob, b.dem_prob));
+
+            // Calculate total electoral votes
+            const totalVotes = d3.sum(data, d => d.ev);
+          
+
+        
+
+            // Set up SVG container
+            const chart = d3.select("#chart")
+                .style("position", "relative")
+                .style("width", "100%");
+
+            // Create blocks for each state
+            let accumulatedVotes = 0;
+            chart.selectAll(".block")
+                .data(data)
+                .enter()
+                .append("div")
+                .attr("class", "block")
+                .style("width", d => (d.ev / totalVotes) * 100 + "%")
+                .style("background-color", d => {
+                    const value = +d.dem_prob;
+                    return colorScale(value);
+                })
+                .attr("title", d => d.State + ": " + d.ev + " EVs")
+                .text(d => {
+                    if (d.ev < 7) {
+
+                    } else {
+                        return d.State
+                    }
+                })
+                .each(function (d) {
+                    accumulatedVotes += d.ev;
+                    d.accumulatedVotes = accumulatedVotes;
+                })
+                .on("mouseover", function (event, d) {
+                    const tooltip = tools.append("div")
+                        .attr("class", "tooltip")
+                        .style("left", event.pageX + "px")
+                        .style("top", event.pageY - 350  + "px")
+                        .html(`<strong>${d.id}</strong><br><span id="EV"> Electoral Votes:${d.ev}</span><div>
+                            <div id="d">Harris<br>${Math.round(100 * d.dem_prob)}%</div><div id="r">Trump<br> ${100 - Math.round(100 * d.dem_prob)}%</div></div>
+                            <div id="bar2" style="background:linear-gradient(90deg, #2798da ${Math.round(100 * d.dem_prob)}%, #ff352c ${Math.round(100 * d.dem_prob)}%)"></div></div>
+                            `);
+                })
+                .on("mouseout", function () {
+                    tools.select(".tooltip").remove();
+                });
+
+            // Add a tick mark at 270 electoral votes
+            chart.append("div")
+                .attr("class", "tick")
+                .style("left", () => {
+                    const d = data.find(d => d.accumulatedVotes >= 270);
+                    if (d) {
+                        const prevVotes = d.accumulatedVotes - d.ev;
+                        const partial = (270 - prevVotes) / d.ev;
+                        const percentage = ((prevVotes / totalVotes) + (partial * d.ev / totalVotes)) * 100;
+                        return percentage + "%";
+                    }
+                    return "0%";
+                })
+                .style("top", "0")
+                .style("height", "60px")
+                .text("270 EVs");
+            document.getElementById("map-container").appendChild(xml.documentElement);
+            const svg = d3.select("#map-container svg");
+
+            // Map state abbreviations to data
+            const stateDataMap = new Map(data.map(d => [d.State, +d.dem_prob]));
+            const stateEVs = new Map(data.map(d => [d.State, +d.ev]));
+            console.log(stateEVs)
+
+            // Define color scale for map
+
+            const tools = d3.select("#tools")
+                .style("position", "relative")
+                .style("width", "100%");
+
+            // Color the states based on margin
+            svg.selectAll("path")
+                .data(data, function(d) { return d ? d.State : this.id; })
+                .attr("class", "state")
+                .attr("stroke", function (d) {
+                    const margin = d.dem_prob;
+                    if (margin > .4 && margin < .6) {
+                        d3.select(this)
+                        return "black"
+                    }
+                })
+                .attr("stroke-width", function (d) {
+                    const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
+                    const margin = d.dem_prob;
+
+                    if (margin > .4 && margin < .6) {
+                        d3.select(this)
+                        return "2"
+                    }
+                })
+                .on("mouseover", function (event, d) {
+                    d3.select(this)
+                        .attr("stroke-linejoin", "square")
+                        .attr("stroke", "black")  // Outline in black
+                        .attr("stroke-width", 2.5);  // Increase stroke width
+                    const tooltip = tools.append("div")
+                        .attr("class", "tooltip")
+                        .style("left", event.pageX + "px")
+                        .style("top", event.pageY + "px")
+                        .html(`<strong>${d.id}</strong><br><span id="EV"> Electoral Votes:${d.ev}</span><div>
+                            <div id="d">Harris<br>${Math.round(100 * d.dem_prob)}%</div><div id="r">Trump<br> ${100 - Math.round(100 * d.dem_prob)}%</div></div>
+                            <div id="bar2" style="background:linear-gradient(90deg, #2798da ${Math.round(100 * d.dem_prob)}%, #ff352c ${Math.round(100 * d.dem_prob)}%)"></div></div>
+                            `);
+                })
+                .on("mousemove", function (event, d) {
+                    d3.select(this)
+                    const tooltip = tools.select(".tooltip")
+                        .style("left", event.pageX - 75 + "px")
+                        .style("top", event.pageY - 350 + "px")
+                })
+                .on("mouseout", function (event,d) {
+                    const margin = d.dem_prob;
+                    tools.select(".tooltip").remove()
+                    d3.select(this)
+                        .attr("stroke", function () {
+                            if (margin > .4 && margin < .6) {
+                                return "black"
+                            }
+                            else {
+                                return "none"
+                            }
+                        })  // Remove outline
+                        .attr("stroke-width", function () {
+                            if (margin > .4 && margin < .6) {
+                                return "2"
+                            }
+                            else {
+                                return "1"
+                            }
+                        });  // Revert stroke width
+                })
+                .attr("fill", function (d) {
+                    const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
+                    const margin = d.dem_prob;
+                    return margin !== undefined ? colorScale(margin) : "#ccc";  // Default color if no data
+                });
+
+
+
+        }).catch(function (error) {
+            console.error('Error loading the SVG file:', error);
+        });
+    }).catch(function (error) {
+        console.error('Error loading the CSV file:', error);
+    });
+
+</script>
