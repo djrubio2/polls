@@ -90,6 +90,14 @@ table {
 <div id="other-states-table"></div>
 
 <script>
+
+d3.csv("topline.csv").then(function(data) {
+
+d3.select("#dVote")
+    .html(d3.median(data, d => d.dem_avg));        
+d3.select("#rVote")
+        .html(d3.median(data, d => d.gop_avg));        
+});
     // Load data from CSV file
     d3.csv("state_averages.csv").then(function(pollingData) {
         const colorScaleD = d3.scaleLinear()
