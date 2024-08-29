@@ -23,6 +23,12 @@
             padding-bottom: 50px;
 
         }
+        g{
+            user-select: none;
+        }
+        text{
+            pointer-events: none;
+        }
 
         hr {
             border: 1px solid black;
@@ -254,7 +260,7 @@
                 <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 8-22-24</span>
                 <hr>
 
-                <h3 style="text-align: left">Chance of winning a majority:</h3>
+                <h3 style="text-align: left">Chance of winning the presidency:</h3>
                 <div id="random">
                 </div>
                 <div class="dem">
@@ -667,6 +673,7 @@
                 .attr("fill", function (d) {
                     const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
                     const margin = d.dem_prob;
+                  
                     return margin !== undefined ? colorScale(margin) : "#ccc";  // Default color if no data
                 });
 

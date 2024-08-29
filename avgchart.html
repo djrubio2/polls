@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Inconsolata:400,700');
+
+	body {
+		font: 12px "Helvetica", 'Arimo';
+		font-weight: bold;
+	}
+
+	path {
+		stroke: grey;
+		stroke-width: 3;
+		fill: none;
+	}
+
+	select {
+		appearance: none;
+		border: 2px solid black;
+		padding: 7px;
+		border-radius: 0;
+		font-weight: bold;
+	}
+
+	select::after {
+		content: "v";
+	}
+
+	#today {
+		text-transform: uppercase;
+	}
+
+	#lepenLine {
+		stroke: #ff352c;
+	}
+
+	.GOPpoll {
+		fill: #ff372c7b;
+	}
+
+	.Dempoll {
+		fill: #2798da6f;
+	}
+
+	#gopText,
+	#gopCircle {
+		fill: #ff352c;
+	}
+
+	.y.axis {
+		font-family: 'Inconsolata';
+		font-size: 10pt;
+	}
+
+	.backText {
+		fill: whitesmoke;
+		stroke: whitesmoke;
+		stroke-width: 3px;
+	}
+
+	#macronLine {
+		stroke: #2798da;
+	}
+
+	#macronText {
+		fill: #2798da;
+	}
+
+	#zemmourLine {
+		stroke: #5c504f;
+	}
+
+	#zemmourText {
+		fill: #5c504f;
+	}
+
+	#pecresseLine {
+		stroke: rgb(30, 154, 243);
+	}
+
+	#pecresseText {
+		fill: rgb(30, 154, 243);
+	}
+
+	#melenchonLine {
+		stroke: rgb(255, 85, 77);
+	}
+
+	#melenchonText {
+		fill: rgb(255, 85, 77);
+	}
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: grey;
+		stroke-width: 1;
+		shape-rendering: crispEdges;
+	}
+
+	.grid line {
+		stroke: lightgrey;
+		stroke-opacity: 0.7;
+		shape-rendering: crispEdges;
+	}
+
+	.grid path {
+		stroke-width: 0;
+	}
+	#menu{
+		border:2px solid black;
+		background-color: rgb(221, 221, 221);
+		padding: 5px;
+	}
+</style>
+
+<body>
+	<div id="menu">
+		Select a state:
+		<select id="stateSelect"></select>
+
+	</div>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+
+	<script>
+		var day = 450;
+		var margin = { top: 30, right: 100, bottom: 30, left: 50 },
+			width = 600 - margin.left - margin.right,
+			height = 300 - margin.top - margin.bottom;
+
+		var parseTime = d3.timeParse("%m/%d/%Y");
+		var x = d3.scaleTime().range([0, day]);
+		var y = d3.scaleLinear().range([height, 0]);
+
+		var xAxis = d3.axisBottom().scale(x)
+			.ticks(2);
+
+		var yAxis = d3.axisLeft().scale(y)
+			.ticks(5);
+
+		var valueline = d3.line()
+			.x(function (d) { return x(d.date); })
+			.y(function (d) { return y(d.Dem); });
+
+		var valueline2 = d3.line()
+			.x(function (d) { return x(d.date); })
+			.y(function (d) { return y(d.GOP); });
+		var valueline3 = d3.line()
+			.x(function (d) { return x(d.date); })
+			.y(function (d) { return y(d.Oth); })
+
+		var svg = d3.select("body")
+			.on('mousemove', function (d, i) {
+				console.log(d3.event.pageX);
+				d3.select("#cursor").transition()
+					.duration('1')
+					.attr('opacity', '.2')
+					.attr("x1", d3.event.pageX)
+					.attr("x2", d3.event.pageX);
+			})
+			.append("svg")
+			.attr("width", width + margin.left + margin.right)
+			.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+		function make_x_gridlines() {
+			return d3.axisBottom(x)
+				.ticks(2)
+		}
+
+		// gridlines in y axis function
+		function make_y_gridlines() {
+			return d3.axisLeft(y)
+				.ticks(5)
+		}
+
+
+
+		// Get the data
+		d3.csv("pollingavg.csv", function (error, data) {
+			data.forEach(function (d) {
+				d.date = parseTime(d.Date);
+				d.Dem = +d.Dem;
+				d.GOP = +d.GOP;
+
+			});
+
+
+
+			// Scale the range of the data
+			x.domain(d3.extent(data, function (d) { return d.date; }));
+			y.domain([20, d3.max(data, function (d) { return Math.max(0, 65); })]);
+			d3.axisLeft()
+				.tickFormat(d => d + "%")
+			svg.append("g")
+				.attr("class", "grid")
+				.attr("transform", "translate(0," + height + ")")
+				.call(make_x_gridlines()
+					.tickSize(-height)
+					.tickFormat("")
+				)
+
+			// add the Y gridlines
+			svg.append("g")
+				.attr("class", "grid")
+				.call(make_y_gridlines()
+					.tickSize(-width)
+					.tickFormat("")
+				)
+
+			svg.append("path")		// Add the valueline path.
+				.attr("class", "line")
+				.attr("id", "macronLine")
+				.attr("d", valueline(data));
+
+			svg.append("path")		// Add the valueline2 path.
+				.attr("class", "line")
+				.attr("id", "lepenLine")
+				.attr("d", valueline2(data));
+		
+
+			svg.append("g")			// Add the X Axis
+				.attr("class", "x axis")
+				.attr("transform", "translate(0," + height + ")")
+				.call(xAxis);
+
+			svg.append("g")			// Add the Y Axis
+				.attr("class", "y axis")
+				.call(yAxis);
+
+			svg.append("circle")
+				.attr("cx", day)
+				.attr("cy", y(data[data.length - 1].GOP))
+				.attr("r", 4)
+				.attr("id", "gopCircle")
+				.style("stroke", "whitesmoke");
+			svg.append("circle")
+				.attr("cx", day)
+				.attr("cy", y(data[data.length - 1].Dem))
+				.attr("r", 4)
+				.attr("id", "macronText")
+				.style("stroke", "whitesmoke");
+
+
+			var space = 0;
+			var difference = y(data[data.length - 1].Dem) - y(data[data.length - 1].GOP);
+			console.log(difference)
+			if (difference < 11 && difference > 0) {
+				space = -2;
+				console.log(space)
+			}
+			else if (difference > -11 && difference < 0) {
+				space = 2;
+			}
+			else {
+				space = 0;
+			}
+
+			svg.append("text")
+				.attr("transform", "translate(" + (day + 5) + "," + y(data[data.length - 1].GOP - space) + ")")
+				.attr("dy", ".35em")
+				.attr("text-anchor", "start")
+				.attr("id", "gopText")
+				.text(data[data.length - 1].GOP + "% Trump");
+			svg.append("text")
+				.attr("transform", "translate(" + (day + 5) + "," + y(data[data.length - 1].Dem + space) + ")")
+				.attr("dy", ".35em")
+				.attr("text-anchor", "start")
+				.attr("id", "macronText")
+				.text(data[data.length - 1].Dem + "% Harris");
+
+
+
+			formatDate = d3.timeFormat("%b %-d")
+
+			svg.append("text")
+				.style("font-size", "8pt")  // colour the line
+				.text(formatDate(data[data.length - 1].date))
+				.attr("x", day)     // x position of the first end of the line
+				.attr("y", 260)
+				.attr("id", "today");
+			console.log(data.length - 1);
+			console.log(data[data.length - 1].GOP);
+			console.log(data[data.length - 1].Dem);
+
+			console.log(y(data[0].date));
+
+			d3.csv("state-polls.csv", function (error, data2) {
+				if (error) throw error;
+				// Process data
+				data2.forEach(function (d) {
+					d.date = parseTime(d.Date);
+					d.Dem = +d.Dem;
+					d.GOP = +d.GOP;
+				});
+
+				// Get unique states for dropdown options
+				var states = Array.from(new Set(data.map(d => d.State)));
+
+				// Populate the dropdown with state options
+				var dropdown = d3.select("#stateSelect");
+				dropdown.selectAll("option")
+					.data(states)
+					.enter()
+					.append("option")
+					.text(function (d) { return d; })
+					.attr("value", function (d) { return d; });
+
+				// Initial rendering
+				updateChart(states[0]);
+
+				// Update chart when a new state is selected
+				dropdown.on("change", function () {
+					var selectedState = d3.select(this).property("value");
+					updateChart(selectedState);
+				});
+
+				function updateChart(state) {
+
+
+					// Filter data based on selected state
+					var filteredData = data2.filter(function (d) {
+						return d.State === state;
+					});
+
+					var filteredData2 = data.filter(function (d) {
+						return d.State === state;
+					});
+
+					// Update the domains of the scales based on the filtered data
+					x.domain(d3.extent(filteredData2, function (d) { return d.date; }));
+					y.domain([20, d3.max(filteredData, function (d) { return Math.max(d.Dem, d.GOP) + 10; })]);
+
+
+					// Select and update the Democratic line
+					svg.select("#macronLine")
+						.datum(filteredData2)
+						.transition()
+						.duration(750)
+						.attr("d", valueline);
+
+					// Select and update the GOP line
+					svg.select("#lepenLine")
+						.datum(filteredData2)
+						.transition()
+						.duration(750)
+						.attr("d", valueline2);
+
+					// Select and update the "Other" line
+					svg.select("#zemmourLine")
+						.datum(filteredData2)
+						.transition()
+						.duration(750)
+						.attr("d", valueline3);
+
+					// Remove existing circles
+					svg.selectAll(".GOPpoll").remove();
+					svg.selectAll(".Dempoll").remove();
+
+					// Bind filtered data and create circles for GOP polls
+					svg.append('g')
+						.selectAll("circle.GOPpoll")
+						.data(filteredData)
+						.enter()
+						.append("circle")
+						.attr("class", "GOPpoll")
+						.attr("cx", function (d) { return x(d.date); })
+						.attr("cy", function (d) { return y(d.GOP); })
+						.attr("r", 3);
+
+					// Bind filtered data and create circles for Democratic polls
+					svg.append('g')
+						.selectAll("circle.Dempoll")
+						.data(filteredData)
+						.enter()
+						.append("circle")
+						.attr("class", "Dempoll")
+						.attr("cx", function (d) { return x(d.date); })
+						.attr("cy", function (d) { return y(d.Dem); })
+						.attr("r", 3);
+
+					var space = 0;
+					var difference = y(filteredData2[filteredData2.length - 1].Dem) - y(filteredData2[filteredData2.length - 1].GOP);
+					console.log(difference)
+					if (difference < 11 && difference > 0) {
+						space = -2;
+						console.log(space)
+					}
+					else if (difference > -11 && difference < 0) {
+						space = 2;
+					}
+					else {
+						space = 0;
+					}
+
+					svg.select("text#macronText")
+						.data(filteredData2)
+						.attr("transform", "translate(" + (day + 5) + "," + y(filteredData2[filteredData2.length - 1].Dem + space) + ")")
+						.text(filteredData2[filteredData2.length - 1].Dem + "% Harris");
+					svg.select("text#gopText")
+						.data(filteredData2)
+						.attr("transform", "translate(" + (day + 5) + "," + y(filteredData2[filteredData2.length - 1].GOP - space) + ")")
+						.text(filteredData2[filteredData2.length - 1].GOP + "% Trump");
+
+
+					svg.select("circle#gopCircle")
+						.attr("cy", y(filteredData2[filteredData2.length - 1].GOP));
+					svg.select("circle#macronText")
+						.transition()
+						.duration(750)
+						.attr("cy", y(filteredData2[filteredData2.length - 1].Dem));
+
+
+					// Update the axes
+					svg.select(".x.axis")
+						.transition()
+						.duration(750)
+						.call(xAxis);
+
+					svg.select(".y.axis")
+						.transition()
+						.duration(750)
+						.call(yAxis);
+				}
+			});
+
+
+
+		});
+
+
+	</script>

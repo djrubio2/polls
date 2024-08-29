@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Inconsolata:400,700');
+
+body { font: 14px "Helvetica",'Arimo';
+font-weight:bold;
+}
+
+path { 
+	stroke: grey;
+	stroke-width: 3;
+	fill: none;
+}
+#today{
+	text-transform: uppercase;
+}
+#lepenLine{
+	stroke:#ff352c;
+}
+#lepenText{
+	fill:#ff352c;
+}
+.y.axis{
+	font-family: 'Inconsolata';
+	font-size: 10pt;
+}
+
+#backText{
+	fill:whitesmoke;
+	stroke: whitesmoke;
+stroke-width: 3px;
+}
+#macronLine{
+	stroke: #2798da;
+}
+#macronText{
+	fill: #2798da;
+}
+#zemmourLine{
+	stroke: #5c504f;
+}
+#zemmourText{
+	fill: #5c504f;
+}
+#pecresseLine{
+	stroke: rgb(30, 154, 243);
+}
+#pecresseText{
+	fill: rgb(30, 154, 243);
+}
+#melenchonLine{
+	stroke:rgb(255, 85, 77);
+}
+#melenchonText{
+	fill:rgb(255, 85, 77);
+}
+.axis path,
+.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+</style>
+<body>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+<script>
+var day = 250;
+var	margin = {top: 30, right: 100, bottom: 30, left: 50},
+	width = 400 - margin.left - margin.right,
+	height = 270 - margin.top - margin.bottom;
+
+var	parseTime = d3.timeParse("%m/%d/%Y");
+var x = d3.scaleTime().range([0, day]);
+var	y = d3.scaleLinear().range([height, 0]);
+
+var	xAxis =d3.axisBottom().scale(x)
+	.ticks(2);
+
+var	yAxis = d3.axisLeft().scale(y)
+	.ticks(5);
+
+var	valueline = d3.line()
+    .x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.dem_prob); });
+	
+var	valueline2 = d3.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.gop_prob); });
+var	valueline3 = d3.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.Zemmour); })	
+var	pecresseline = d3.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.Pecresse); })
+var	melenchonline = d3.line()
+	.x(function(d) { return x(d.date); })
+	.y(function(d) { return y(d.Melenchon); })
+var	svg = d3.select("body")
+	.append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	    .append("g")
+		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+function make_x_gridlines() {		
+    return d3.axisBottom(x)
+        .ticks(2)
+}
+
+// gridlines in y axis function
+function make_y_gridlines() {		
+    return d3.axisLeft(y)
+        .ticks(5)
+}
+
+// Get the data
+d3.csv("topline_history.csv", function(error, data) {
+	data.forEach(function(d) {
+		d.date = parseTime(d.date);
+		d.dem_prob = +d.dem_prob;
+		d.gop_prob = +d.gop_prob;
+
+	});
+
+	// Scale the range of the data
+	x.domain(d3.extent(data, function(d) { return d.date; }));
+	y.domain([0, d3.max(data, function(d) { return Math.max(0, 1); })]);
+d3.axisLeft()
+    .tickFormat(d => d + "%")
+ svg.append("g")			
+      .attr("class", "grid")
+      .attr("transform", "translate(0," + height + ")")
+      .call(make_x_gridlines()
+          .tickSize(-height)
+          .tickFormat("")
+      )
+
+  // add the Y gridlines
+  svg.append("g")			
+      .attr("class", "grid")
+      .call(make_y_gridlines()
+          .tickSize(-width)
+          .tickFormat("")
+      )
+      
+	svg.append("path")		// Add the valueline path.
+		.attr("class", "line")
+		.attr("id", "macronLine")
+		.attr("d", valueline(data));
+
+	svg.append("path")		// Add the valueline2 path.
+		.attr("class", "line")
+		.attr("id", "lepenLine")
+		.attr("d", valueline2(data));
+	svg.append("path")		// Add the valueline2 path.
+		.attr("class", "line")
+		.attr("id", "zemmourLine")
+		.attr("d", valueline3(data));
+	svg.append("path")		// Add the valueline2 path.
+		.attr("class", "line")
+		.attr("id", "pecresseLine")
+		.attr("d", pecresseline(data));	
+	svg.append("path")		// Add the valueline2 path.
+		.attr("class", "line")
+		.attr("id", "melenchonLine")
+		.attr("d", melenchonline(data));	
+
+	svg.append("g")			// Add the X Axis
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+
+	svg.append("g")			// Add the Y Axis
+		.attr("class", "y axis")
+		.call(yAxis);
+	
+		svg.append("line")
+	    .style("stroke", "black")
+		.style("stroke-width", "2px")  // colour the line
+        .attr("x1", 250)     // x position of the first end of the line
+        .attr("y1", 0)      // y position of the first end of the line
+        .attr("x2", 250)     // x position of the second end of the line
+        .attr("y2", 215);    // y position of the second end of the line
+
+	svg.append("circle")
+	    .attr("cx", day)
+        .attr("cy", y(data[data.length-1].gop_prob)) 
+        .attr("r", 4)
+		.attr("id", "lepenText")
+        .style("stroke","whitesmoke");
+ svg.append("circle")
+	    .attr("cx", day)
+        .attr("cy", y(data[data.length-1].dem_prob)) 
+        .attr("r", 4)
+		.attr("id", "macronText")
+        .style("stroke","whitesmoke");
+		svg.append("text")
+		.attr("transform", "translate(" + (day+5) + "," + y(data[data.length-1].gop_prob) + ")")
+		.attr("dy", ".35em")
+		.attr("text-anchor", "start")
+		.attr("id", "backText")
+		.text(data[data.length-1].gop_prob*100+"%");
+svg.append("text")
+	.attr("transform", "translate(" + (day+5) + "," + y(data[data.length-1].dem_prob) + ")")
+	.attr("dy", ".35em")
+	.attr("text-anchor", "start")
+	.attr("id", "backText")
+	.text(data[data.length-1].dem_prob*100+"%");
+svg.append("text")
+		.attr("transform", "translate(" + (day+5) + "," + y(data[data.length-1].gop_prob) + ")")
+		.attr("dy", ".35em")
+		.attr("text-anchor", "start")
+		.attr("id", "lepenText")
+		.text(data[data.length-1].gop_prob*100+"%");
+svg.append("text")
+	.attr("transform", "translate(" + (day+5) + "," + y(data[data.length-1].dem_prob) + ")")
+	.attr("dy", ".35em")
+	.attr("text-anchor", "start")
+	.attr("id", "macronText")
+	.text(data[data.length-1].dem_prob*100+"%");
+
+
+
+svg.append("text")
+	    .style("font-size", "8pt")  // colour the line
+		.style("fill","gray")
+		.text("ELECTION DAY")
+        .attr("x", 210)     // x position of the first end of the line
+        .attr("y",240 );
+	svg.append("text")
+		.style("fill","gray")
+	    .style("font-size", "8pt")  // colour the line
+		.text("NOV 8")
+        .attr("x", 230)     // x position of the first end of the line
+        .attr("y",-1 );
+
+	formatDate = d3.timeFormat("%b %-d")
+
+	svg.append("text")
+	    .style("font-size", "8pt")  // colour the line
+		.text(formatDate(data[data.length-1].date))
+        .attr("x", day)     // x position of the first end of the line
+        .attr("y",230)   
+		.attr("id","today");
+console.log(data.length-1);
+console.log(data[data.length-1].gop_prob);
+console.log(data[data.length-1].dem_prob);
+
+console.log(y(data[0].date));
+
+
+});
+
+</script>
