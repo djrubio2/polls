@@ -158,9 +158,14 @@
 					.attr("x1", d3.event.pageX)
 					.attr("x2", d3.event.pageX);
 			})
+
+			//width + margin.left + margin.right
+			//height + margin.top + margin.bottom
 			.append("svg")
-			.attr("width", width + margin.left + margin.right)
-			.attr("height", height + margin.top + margin.bottom)
+			.attr("width", "100%")
+			.attr("height", "300px")
+			.attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 600 300")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
