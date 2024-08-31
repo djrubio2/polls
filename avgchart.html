@@ -4,7 +4,7 @@
 	@import url('https://fonts.googleapis.com/css?family=Arimo:400,700|Inconsolata:400,700');
 
 	body {
-		font: 12px "Helvetica", 'Arimo';
+		font: 12pt "Helvetica", 'Arimo';
 		font-weight: bold;
 	}
 
@@ -48,7 +48,7 @@
 	}
 
 	.y.axis {
-		font-family: 'Inconsolata';
+		font-family: 'Arimo';
 		font-size: 10pt;
 	}
 
@@ -74,13 +74,7 @@
 		fill: #5c504f;
 	}
 
-	#pecresseLine {
-		stroke: rgb(30, 154, 243);
-	}
 
-	#pecresseText {
-		fill: rgb(30, 154, 243);
-	}
 
 	#melenchonLine {
 		stroke: rgb(255, 85, 77);
@@ -165,7 +159,7 @@
 			.attr("width", "100%")
 			.attr("height", "300px")
 			.attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 600 300")
+            .attr("viewBox", "0 0 650 300")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -199,7 +193,7 @@
 			x.domain(d3.extent(data, function (d) { return d.date; }));
 			y.domain([20, d3.max(data, function (d) { return Math.max(0, 65); })]);
 			d3.axisLeft()
-				.tickFormat(d => d + "%")
+				.tickFormat(d => d)
 			svg.append("g")
 				.attr("class", "grid")
 				.attr("transform", "translate(0," + height + ")")
