@@ -20,9 +20,9 @@ body{
 table {
             border-collapse: collapse;
             width: 100%;
+            text-align: center;;
         }
         th, td {
-            text-align: left;
             padding: 8px;
         }
         td{
@@ -36,6 +36,7 @@ table {
         }
         td:nth-child(2){
             font-weight: bold;
+            column-width: 20px;
         }
         th {
             font-family: 'Arimo';
@@ -67,29 +68,55 @@ table {
            border: none;
            overflow:hidden;
         }
+        #lead-candidate,#margin{
+            font-weight: bold;
+        }
+        .box-score{
+            float: left;
+            width:150px;
+            padding:10px;
+            border:3px solid;
+            margin:3px;
+            box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.95);
+            text-align: center;
+        }
+        #dem-score{
+            color:#2798da;
+            font-weight: bold;
+            border-color: #2798da;
+        }
+        #gop-score{
+            color:#ff352c;
+            font-weight: bold;
+            border-color: #ff352c;
+        }
     </style>
 </head>
 <body>
 <h1>Polling Average</h1>
-<p id="update">Last updated: 8-30-2024</p>
+<p id="update">Last updated: 8-31-2024</p>
 <h2>Presidential Race</h2>
 <p>States will be added as polling comes in.</p>
-<h3>The Big Number - National Polling Average</h3>
-<p>THe current national polling average.</p>
-<div>
-    <div>
+<h3>National Polling Average</h3>
+<p>The national polling average. Currently <span id="lead-candidate"></span> leads by around <span id="margin"> </span> percentage points nationwide.</p>
+<div style="width:100%;display:inline-block;">
+    <div class="box-score" id="dem-score">
         <div>Harris</div>
+        <hr style="border:1px solid #2798da">
         <div id="dVote">47.52</div>
     </div>
-    <div>
+    <div class="box-score" id="gop-score">
         <div>Trump</div>
+        <hr style="border:1px solid #ff352c">
         <div id="rVote">45.35</div>
-
     </div>
 </div>
+<br>
+<div>
 <h2>State Averages</h2>
 <p>Which candidate leads in polls of each state?</p>
 <iframe src="avgchart.html" scrolling="no"></iframe>
+</div>
 <div id="polling-table"></div>
 
 <h2>Close States</h2>
@@ -102,10 +129,38 @@ table {
 
 d3.csv("topline.csv").then(function(data) {
 
+    var dVote = d3.sum(data, d => d.dem_avg);
+    var rVote = d3.sum(data, d => d.gop_avg);
+
+    var margin = dVote - rVote;
+d3.select("#lead-candidate")
+    .attr("style",() =>{
+    if (margin > 0){
+     return "color:#2798da"
+     console.log(margin)
+    }
+    else if(margin < 0){
+        return "color:#ff352c"
+        console.log(margin)
+    }
+    })
+    .html(() =>{
+    if (margin > 0){
+     return "Harris"
+     console.log(margin)
+    }
+    else if(margin < 0){
+        return "Trump"
+        console.log(margin)
+    }
+    });
+
+d3.select("#margin")
+    .html(Math.round(margin));
 d3.select("#dVote")
-    .html(d3.median(data, d => d.dem_avg));        
+    .html(dVote+"%");        
 d3.select("#rVote")
-        .html(d3.median(data, d => d.gop_avg));        
+        .html(rVote+"%");        
 });
     // Load data from CSV file
     d3.csv("state_averages.csv").then(function(pollingData) {
@@ -162,8 +217,13 @@ console.log(colorScaleD(5))
                         }
                         return Math.abs(d)
                     }
+                     if(i==2){
+                        return d + "%"
+                    }
+                    if(i==3){
+                        return d + "%"
+                    }
                     else{
-
                         return d
                     }
                     }
