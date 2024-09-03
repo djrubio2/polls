@@ -57,6 +57,11 @@ body{
 <div id="other-states-table"></div>
 
 <script>
+
+d3.csv("topline.csv").then(function(pollingData) {
+
+    
+});
     // Load data from CSV file
     d3.csv("state_averages.csv").then(function(pollingData) {
         const colorScaleD = d3.scaleLinear()

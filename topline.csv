@@ -1,2 +1,2 @@
-date,dem_prob,gop_prob,tie_prob,dem_vote,gop_vote,oth_vote,dem_avg,gop_avg,3p_avg
-08/31/2024,0.4964,0.4966,0.007,50.66,48.56,0.78,49.25,45.78,
+date,dem_prob,gop_prob,tie_prob,dem_vote,gop_vote,oth_vote,dem_avg,gop_avg,3p_avg,dem_sen_prob,gop_sen_prob,tie_sen_prob
+09/02/2024,0.5019,0.4925,0.0056,50.83,48.39,0.78,49.22,45.76,,0.2779,0.634,0.0881
