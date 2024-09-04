@@ -64,7 +64,7 @@ table {
         }
         iframe{
             width: 100%;
-            height: 360px;
+            height: 450px;
            border: none;
            overflow:hidden;
         }
@@ -94,11 +94,14 @@ table {
 </head>
 <body>
 <h1>Polling Average</h1>
-<p id="update">Last updated: 9-2-2024</p>
+<p id="update">Last updated: 9-3-2024</p>
 <h2>Presidential Race</h2>
 <p>States will be added as polling comes in.</p>
 <h3>National Polling Average</h3>
 <p>The national polling average. Currently <span id="lead-candidate"></span> leads by around <span id="margin"> </span> percentage points nationwide.</p>
+<iframe src="avgchart.html" scrolling="no"></iframe>
+
+<!-- 
 <div style="width:100%;display:inline-block;">
     <div class="box-score" id="dem-score">
         <div>Harris</div>
@@ -113,9 +116,9 @@ table {
 </div>
 <br>
 <div>
+    -->
 <h2>State Averages</h2>
 <p>Which candidate leads in polls of each state?</p>
-<iframe src="avgchart.html" scrolling="no"></iframe>
 </div>
 <div id="polling-table"></div>
 

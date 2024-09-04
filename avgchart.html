@@ -26,10 +26,6 @@
 		background-color: rgb(236, 236, 236);
 	}
 
-	select::after {
-		content: "v";
-	}
-
 	#today {
 		text-transform: uppercase;
 	}
@@ -121,17 +117,17 @@
 		var day = 450;
 		var margin = { top: 30, right: 100, bottom: 30, left: 25 },
 			width = 600 - margin.left - margin.right,
-			height = 300 - margin.top - margin.bottom;
+			height = 400 - margin.top - margin.bottom;
 
 		var parseTime = d3.timeParse("%m/%d/%Y");
 		var x = d3.scaleTime().range([0, day]);
 		var y = d3.scaleLinear().range([height, 0]);
 
 		var xAxis = d3.axisBottom().scale(x)
-			.ticks(2);
+			.ticks(5);
 
 		var yAxis = d3.axisLeft().scale(y)
-			.ticks(5);
+			.ticks(2);
 
 		var valueline = d3.line()
 			.x(function (d) { return x(d.date); })
@@ -145,22 +141,14 @@
 			.y(function (d) { return y(d.Oth); })
 
 		var svg = d3.select("body")
-			.on('mousemove', function (d, i) {
-				console.log(d3.event.pageX);
-				d3.select("#cursor").transition()
-					.duration('1')
-					.attr('opacity', '.2')
-					.attr("x1", d3.event.pageX)
-					.attr("x2", d3.event.pageX);
-			})
 
 			//width + margin.left + margin.right
 			//height + margin.top + margin.bottom
 			.append("svg")
 			.attr("width", "100%")
-			.attr("height", "300px")
+			.attr("height", "400px")
 			.attr("preserveAspectRatio", "xMinYMin meet")
-            .attr("viewBox", "0 0 650 300")
+            .attr("viewBox", "0 0 650 400")
 			.append("g")
 			.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -276,12 +264,6 @@
 
 			formatDate = d3.timeFormat("%b %-d")
 
-			svg.append("text")
-				.style("font-size", "8pt")  // colour the line
-				.text(formatDate(data[data.length - 1].date))
-				.attr("x", day)     // x position of the first end of the line
-				.attr("y", 260)
-				.attr("id", "today");
 			console.log(data.length - 1);
 			console.log(data[data.length - 1].GOP);
 			console.log(data[data.length - 1].Dem);
@@ -299,6 +281,10 @@
 
 				// Get unique states for dropdown options
 				var states = Array.from(new Set(data.map(d => d.State)));
+				states.sort();
+
+				var first = "National";
+                states.sort(function(x,y){ return x == first ? -1 : y == first ? 1 : 0; });
 
 				// Populate the dropdown with state options
 				var dropdown = d3.select("#stateSelect");
@@ -315,6 +301,7 @@
 				// Update chart when a new state is selected
 				dropdown.on("change", function () {
 					var selectedState = d3.select(this).property("value");
+					console.log(selectedState)
 					updateChart(selectedState);
 				});
 
