@@ -162,6 +162,30 @@
                     #f5f5f5 10px);
             float: left;
         }
+        #tieDemProb {
+            width: 0%;
+            height: 100%;
+            background-color: #8b8b8b;
+            background: repeating-linear-gradient(45deg,
+                    #2798da,
+                    #2798da 5px,
+                    #ffffff 5px,
+                    #ffffff 10px);
+            float: left;
+        }
+        #tieRepProb {
+            width: 0%;
+            height: 100%;
+            background-color: #8b8b8b;
+            background: repeating-linear-gradient(45deg,
+                    #ffffff,
+                    #ffffff 5px,
+                    #ff352c 5px,
+                    #ff352c 10px);
+            float: left;
+        }
+
+
 
         #repProb {
             width: 50%;
@@ -277,7 +301,8 @@
                 <div id="bar-container">
                     <div id="bar">
                         <div id="demProb"></div>
-                        <div id="tieProb"></div>
+                        <div id="tieDemProb"></div>
+                        <div id="tieRepProb"></div>
                         <div id="repProb"></div>
                     </div>
                     <div class="dem">
@@ -333,6 +358,7 @@
         </table>
     </div>
     <hr>
+    <object data="test.svg"></object>
 
 <h2>Tossups</h2>
 <div id="close-margins-table"></div>
@@ -379,8 +405,15 @@
         return d.tie_sen_prob;
         });
 
+        const presD = d3.sum(data, d => {
+        return d.dem_prob;
+        });
+        const presR = d3.sum(data, d => {
+        return d.gop_prob;
+        });
+
         console.log(demProb / 10000, repProb / 10000, tieProb / 10000)
-        console.log(avgEV, avgEVR)
+        console.log(avgEV, avgEVR) 
 
 
         d3.select("#rSeatAvg")
@@ -388,15 +421,17 @@
         d3.select("#dSeatAvg")
             .html(d3.median(data, d => d.dem_prob));
         d3.select("#toplineD")
-            .html(demProb * 100);
+            .html((demProb+(tieProb*presD)) * 100);
         d3.select("#toplineR")
-            .html(repProb * 100);
+            .html((repProb+(tieProb*presR)) * 100);
         d3.select("#demProb")
             .style("width", demProb *100+ "%");
         d3.select("#repProb")
             .style("width", repProb * 100 + "%");
-        d3.select("#tieProb")
-            .style("width", tieProb * 100 + "%");
+        d3.select("#tieDemProb")
+            .style("width", (tieProb*presD) * 100 + "%");
+        d3.select("#tieRepProb")
+            .style("width", (tieProb*presR) * 100 + "%");
     });
 
 
@@ -404,7 +439,15 @@
     d3.csv("senate_state_probs.csv").then(function (data) {
         const closeMargins = data.filter(d => +d.dem_prob > .4 && +d.dem_prob < .6 );
         const otherStates = data.filter(d => +d.dem_prob < .4 || +d.dem_prob > .6 );
+
+      d3.selectAll("path.seat")
+        .attr("fill","red");
+
+
         
+
+
+
         function createTable(containerId, data) {
             // Create the table element
             const table = d3.select(containerId).append("table");
@@ -428,6 +471,13 @@
                 const rows = tbody.selectAll("tr")
                     .data(data)
                     .join("tr");
+
+            const seatChart = d3.select("svg");
+            seatChart.select("g#seats")
+                 .attr("fill","red");
+
+
+
 
             rows.selectAll("td")
                 .data(d => [d.StateName, d.Expected,d.dem_prob,d.gop_prob])

@@ -127,7 +127,7 @@
 			.ticks(5);
 
 		var yAxis = d3.axisLeft().scale(y)
-			.ticks(2);
+			.ticks(5);
 
 		var valueline = d3.line()
 			.x(function (d) { return x(d.date); })
@@ -185,6 +185,7 @@
 				.tickFormat(d => d)
 			svg.append("g")
 				.attr("class", "grid")
+				.attr("id","x-grid")
 				.attr("transform", "translate(0," + height + ")")
 				.call(make_x_gridlines()
 					.tickSize(-height)
@@ -194,6 +195,7 @@
 			// add the Y gridlines
 			svg.append("g")
 				.attr("class", "grid")
+				.attr("id","y-grid")
 				.call(make_y_gridlines()
 					.tickSize(-width)
 					.tickFormat("")
@@ -320,7 +322,27 @@
 					// Update the domains of the scales based on the filtered data
 					x.domain(d3.extent(filteredData2, function (d) { return d.date; }));
 					y.domain([20, d3.max(filteredData, function (d) { return Math.max(d.Dem, d.GOP) + 10; })]);
+			d3.axisLeft()
+				.tickFormat(d => d)
 
+				
+			svg.select("#y-grid")
+				.attr("transform", "translate(0," + height + ")")
+				.call(make_x_gridlines()
+					.tickSize(-height)
+					.tickFormat("")
+				);
+
+			// add the Y gridlines
+			svg.select("#x-grid")
+			.transition()
+			.duration(750)
+			.attr("transform", "translate("-width+",0)")
+				.call(make_y_gridlines()
+			
+					.tickSize(-width)
+					.tickFormat("")
+				);
 
 					// Select and update the Democratic line
 					svg.select("#macronLine")
