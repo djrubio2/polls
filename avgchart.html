@@ -235,6 +235,7 @@
 				.style("stroke", "whitesmoke");
 
 
+
 			var space = 0;
 			var difference = y(data[data.length - 1].Dem) - y(data[data.length - 1].GOP);
 			console.log(difference)
@@ -261,7 +262,7 @@
 				.attr("text-anchor", "start")
 				.attr("id", "macronText")
 				.text(data[data.length - 1].Dem + "% Harris");
-
+		
 
 
 			formatDate = d3.timeFormat("%b %-d")
