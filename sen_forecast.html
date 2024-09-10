@@ -100,6 +100,8 @@
         #r {
             font-size: 10pt;
             font-weight: bold;
+            width:20%
+
         }
 
         #d {
@@ -282,7 +284,7 @@
         <div id="topline">
             <div id="top-container">
                 <h1 style="text-align:left">2024 Senate Forecast</h1>
-                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-2-24</span>
+                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-9-24</span>
                 <hr>
 
                 <h3 style="text-align: left">Chance of winning a senate majority:</h3>
@@ -551,7 +553,7 @@
         createTable("#other-states-table", otherStates);
 
         // Load the SVG map
-        d3.xml("senate_map.svg").then(function (xml) {
+        d3.xml("senate_map copy.svg").then(function (xml) {
 
             // Sort data by margin
             data.sort((a, b) => d3.descending(a.dem_prob, b.dem_prob));
@@ -663,6 +665,7 @@
                         return "black"
                     }
                 })
+                .attr("fill-opacity",.7)
                 .attr("stroke-width", function (d) {
                     const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
                     const margin = d.dem_prob;
@@ -671,6 +674,83 @@
                         d3.select(this)
                         return "2"
                     }
+                    else{
+                        return "1"
+                    }
+                })
+                .on("mouseover", function (event, d) {
+                    d3.select("circle#"+this.id)
+                    .attr("stroke-width", 2.5);  // Increase stroke width
+
+                    d3.select(this)
+                        .attr("stroke-linejoin", "square")
+                        .attr("stroke", "black")  // Outline in black
+                        .attr("stroke-width", 2.5);  // Increase stroke width
+                    const tooltip = tools.append("div")
+                        .attr("class", "tooltip")
+                        .style("left", event.pageX + "px")
+                        .style("top", event.pageY + "px")
+                        .html(`<span><strong>${d.StateName}</strong></span>
+                        <br>
+                                                    <span id="EV"></span>
+                        <hr>
+                        <div>
+                            <span><strong>Chance of winning:</strong></span>
+                            <div id="d" ><span style="color:#292929;font-size: 8pt;text-align:left;">${d.DemName}:</span>
+<br>${Math.round(100 * d.dem_prob)}%</div><div id="r"><span style="color:#292929;font-size: 8pt;text-align:right;">${d.RepName}:</span>
+<br>${Math.round(100 * d.gop_prob)}%</div><br><br><br></div></div>
+                            <div id="bar2" style="background:linear-gradient(90deg, #2798da ${Math.round(100 * d.dem_prob)}%, #ff352c ${Math.round(100 * d.dem_prob)}%)"></div>
+                            </div>
+                            `);
+                })
+                .on("mousemove", function (event, d) {
+                    d3.select(this)
+                    const tooltip = tools.select(".tooltip")
+                        .style("left", event.pageX - 75 + "px")
+                        .style("top", event.pageY - 500 + "px")
+                })
+                .on("mouseout", function (event, d) {
+                    const margin = d.dem_prob;
+                    d3.select("circle#"+this.id)
+                    .attr("stroke-width", 1);  // restore stroke width
+                    tools.select(".tooltip").remove();
+                    d3.select(this)
+                        .attr("stroke", function () {
+                            if (margin > .4 && margin < .6) {
+                                return "black"
+                            }
+                        })  // Remove outline
+                        .attr("stroke-width", function () {
+                            if (margin > .4 && margin < .6) {
+                                return "2"
+                            }
+                            else {
+                                return "1"
+                            }
+                        });  // Revert stroke width
+                })
+                .attr("fill", "grey");
+ // Color the states based on margin
+ svg.selectAll("circle")
+                .data(data, function (d) { return d ? d.State : this.id; })
+                .attr("class", "state")
+                .attr("stroke", function (d) {
+                    const margin = d.dem_prob;
+                    if (margin > .4 && margin < .6) {
+                        d3.select(this)
+                        return "black"
+                    }
+                    return "black"
+                })
+                .attr("stroke-width", function (d) {
+                    const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
+                    const margin = d.dem_prob;
+
+                    if (margin > .4 && margin < .6) {
+                        d3.select(this)
+                        return "2"
+                    }
+                    return 1
                 })
                 .on("mouseover", function (event, d) {
                     d3.select(this)
@@ -709,16 +789,14 @@
                                 return "black"
                             }
                             else {
-                                return "none"
+                                return "black"
                             }
                         })  // Remove outline
                         .attr("stroke-width", function () {
                             if (margin > .4 && margin < .6) {
                                 return "2"
                             }
-                            else {
-                                return "1"
-                            }
+                            return 1
                         });  // Revert stroke width
                 })
                 .attr("fill", function (d) {
@@ -729,7 +807,6 @@
                   }
                     return margin !== undefined ? colorScale(margin) : "#ccc";  // Default color if no data
                 });
-
 
 
         }).catch(function (error) {

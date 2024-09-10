@@ -1,6 +1,6 @@
 <head>
     <script src="https://d3js.org/d3.v7.min.js"></script>
-    <title>2024 Presidential Forecast</title>
+    <title>2024 House Forecast</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
@@ -24,19 +24,22 @@
             padding-bottom: 50px;
 
         }
-        g{
+
+        g {
             user-select: none;
         }
-        text{
+
+        text {
             pointer-events: none;
         }
 
         hr {
             border: 1px solid black;
         }
-        #chart{
+
+        #chart {
             border: 2px solid black;
-            padding:5px;
+            padding: 5px;
             height: 100px;
 
         }
@@ -54,7 +57,6 @@
             line-height: 50px;
             border-radius: 0px;
             color: black;
-            outline: 1px solid rgb(255, 255, 255);
             z-index: 0;
 
         }
@@ -72,7 +74,8 @@
             height: 60px;
             top: -52px;
         }
-        #majority-label{
+
+        #majority-label {
             position: absolute;
             text-align: left;
             width: auto;
@@ -263,20 +266,20 @@
     <div id="container">
         <div id="topline">
             <div id="top-container">
-                <h1 style="text-align:left">2024 Presidential Forecast</h1>
-                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-9-24</span>
+                <h1 style="text-align:left">2024 House Forecast</h1>
+                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-4-24</span>
                 <hr>
 
-                <h3 style="text-align: left">Chance of winning the presidency:</h3>
+                <h3 style="text-align: left">Chance of winning the House:</h3>
                 <div id="random">
                 </div>
                 <div class="dem">
-                    <span style="color:#292929;font-size: 10pt;text-align:left;">Harris:</span>
+                    <span style="color:#292929;font-size: 10pt;text-align:left;">Dems:</span>
                     <br>
                     <span id="toplineD" class="odometer">46</span><span>%</span>
                 </div>
                 <div class="gop">
-                    <span style="color:#292929;font-size: 10pt;text-align:left;">Trump:</span>
+                    <span style="color:#292929;font-size: 10pt;text-align:left;">GOP:</span>
                     <br>
                     <span id="toplineR" class="odometer">53</span><span>%</span>
                 </div>
@@ -307,7 +310,7 @@
 
     </div>
     <div id="chart">
-        <div  id="majority-label">270</div>
+        <div id="majority-label">270</div>
         <br>
     </div>
     <div>
@@ -340,11 +343,11 @@
     </div>
     <hr>
 
-<h2>Tossups</h2>
-<div id="close-margins-table"></div>
+    <h2>Tossups</h2>
+    <div id="close-margins-table"></div>
 
-<h2>All Other States</h2>
-<div id="other-states-table"></div>
+    <h2>All Other States</h2>
+    <div id="other-states-table"></div>
 </body>
 
 <script>
@@ -360,11 +363,11 @@
 
 
         d3.select("#d_vote")
-            .html( dVote + "%");
+            .html(dVote + "%");
         d3.select("#r_vote")
             .html(rVote + "%");
         d3.select("#i_vote")
-            .html(oVote+"%");
+            .html(oVote + "%");
 
     });
 
@@ -408,10 +411,10 @@
 
 
 
-    d3.csv("state_probs.csv").then(function (data) {
-        const closeMargins = data.filter(d => +d.dem_prob > .4 && +d.dem_prob < .6 );
-        const otherStates = data.filter(d => +d.dem_prob < .4 || +d.dem_prob > .6 );
-        
+    d3.csv("2024houseprobs.csv").then(function (data) {
+        const closeMargins = data.filter(d => +d.dem_prob > .4 && +d.dem_prob < .6);
+        const otherStates = data.filter(d => +d.dem_prob < .4 || +d.dem_prob > .6);
+
         function createTable(containerId, data) {
             // Create the table element
             const table = d3.select(containerId).append("table");
@@ -420,12 +423,12 @@
             const thead = table.append("thead");
             const headers = thead.append("tr")
                 .selectAll("th")
-                .data(["State", "Estimated Margin", "Harris % Chance", "Trump % Chance"])
+                .data(["State", "Estimated Margin", "Dem % Chance", "GOP % Chance"])
                 .enter()
                 .append("th")
                 .text(d => d);
-        
-                data.sort((a, b) => d3.descending(a.dem_prob, b.dem_prob));
+
+            data.sort((a, b) => d3.descending(a.dem_prob, b.dem_prob));
 
             // Create the table body
             const tbody = table.append("tbody");
@@ -436,70 +439,70 @@
                     .data(data)
                     .join("tr");
 
-            rows.selectAll("td")
-                .data(d => [d.id, d.Expected,d.dem_prob,d.gop_prob])
-                .join("td")
-                .text((d, i) => {
-                    if(i==1){
-                        if(d>0)
-                        {
-                            return "D+" + Math.abs(d)   
+                rows.selectAll("td")
+                    .data(d => [d.Code, d.Expected, d.dem_prob, d.gop_prob])
+                    .join("td")
+                    .text((d, i) => {
+                        if (i == 1) {
+                            if (d > 0) {
+                                return "D+" + Math.abs(d)
+                            }
+                            if (d < 0) {
+                                return "R+" + Math.abs(d)
+                            }
+                            return Math.abs(d)
                         }
-                        if(d<0){
-                            return "R+" + Math.abs(d)
+                        if (i == 0) {
+                            return d
                         }
-                        return Math.abs(d)
-                    }
-                    if(i==0){
-                    return d
-                    }
-                    else{
+                        else {
 
-                        return Math.round(d*100)+"%"
+                            return Math.round(d * 100) + "%"
+                        }
                     }
-                    }
-                )
-                .style("color", (d, i) => {
-                    if (i === 1) { // Margin column
-                        const value = +d;
-                        if (value > 0){
+                    )
+                    .style("color", (d, i) => {
+                        if (i === 1) { // Margin column
+                            const value = +d;
+                            if (value > 0) {
+                                return "#2798da";
+                            }
+                            if (value < 0) {
+                                return "#ff352c";
+                            }
+                        }
+
+                        if (i === 2) { // Polling Average column
+                            const value = +d;
                             return "#2798da";
                         }
-                        if (value < 0){
+                        if (i === 3) { // Polling Average column
+                            const value = +d;
                             return "#ff352c";
                         }
+                        return null;
                     }
-                   
-                    if (i === 2) { // Polling Average column
-                        const value = +d;
-                        return "#2798da";
-                    }
-                    if (i === 3) { // Polling Average column
-                        const value = +d;
-                        return "#ff352c";
-                    }
-                    return null;}
-                
-                );
+
+                    );
             }
             // Initial table population
             updateRows(data);
 
             // Sort the table data
             function sortTable(index, ascending, tableData) {
-        tableData.sort((a, b) => {
-            if (index === 0) {  // Sort by State
-                return ascending ? d3.ascending(a.State, b.State) : d3.descending(a.State, b.State);
-            } else if (index === 1) {  // Sort by Margin
-                return ascending ? d3.ascending(+a.Margin, +b.Margin) : d3.descending(+a.Margin, +b.Margin);
-            } else if (index === 2) {  // Sort by Dem (Harris)
-                return ascending ? d3.ascending(+a.Dem, +b.Dem) : d3.descending(+a.Dem, +b.Dem);
-            } else{  // Sort by GOP (Trump)
-                return ascending ? d3.ascending(+a.GOP, +b.GOP) : d3.descending(+a.GOP, +b.GOP);
+                tableData.sort((a, b) => {
+                    if (index === 0) {  // Sort by State
+                        return ascending ? d3.ascending(a.State, b.State) : d3.descending(a.State, b.State);
+                    } else if (index === 1) {  // Sort by Margin
+                        return ascending ? d3.ascending(+a.Margin, +b.Margin) : d3.descending(+a.Margin, +b.Margin);
+                    } else if (index === 2) {  // Sort by Dem (Harris)
+                        return ascending ? d3.ascending(+a.Dem, +b.Dem) : d3.descending(+a.Dem, +b.Dem);
+                    } else {  // Sort by GOP (Trump)
+                        return ascending ? d3.ascending(+a.GOP, +b.GOP) : d3.descending(+a.GOP, +b.GOP);
+                    }
+                });
+                updateRows(tableData);
             }
-        });
-        updateRows(tableData);
-}
 
         }
 
@@ -508,13 +511,13 @@
         createTable("#other-states-table", otherStates);
 
         // Load the SVG map
-        d3.xml("newsvg.svg").then(function (xml) {
+        d3.xml("2022tiles.svg").then(function (xml) {
 
             // Sort data by margin
             data.sort((a, b) => d3.descending(a.dem_prob, b.dem_prob));
 
             // Calculate total electoral votes
-            const totalVotes = d3.sum(data, d => d.ev);
+            const totalVotes = 435;
 
             // Set up SVG container
             const chart = d3.select("#chart")
@@ -528,31 +531,22 @@
                 .enter()
                 .append("div")
                 .attr("class", "block")
-                .style("width", d => (d.ev / totalVotes) * 100 + "%")
+                .style("width", d => (1 / totalVotes) * 100 + "%")
                 .style("background-color", d => {
                     const value = +d.dem_prob;
                     return colorScale(value);
                 })
-                .attr("title", d => d.State + ": " + d.ev + " EVs")
-                .text(d => {
-                    if (d.ev < 7) {
-
-                    } else {
-                        return d.State
-                    }
-                })
                 .each(function (d) {
-                    accumulatedVotes += d.ev;
+                    accumulatedVotes += 1;
                     d.accumulatedVotes = accumulatedVotes;
                 })
                 .on("mouseover", function (event, d) {
                     const tooltip = tools.append("div")
                         .attr("class", "tooltip")
-                        .style("left", event.pageX -70 + "px")
+                        .style("left", event.pageX - 70 + "px")
                         .style("top", event.pageY - 500 + "px")
-                        .html(`<span><strong>${d.id}</strong></span>
+                        .html(`<span><strong>${d.Code}</strong></span>
                         <br>
-                                                    <span id="EV">${d.ev} Electoral Votes</span>
                         <hr>
                         <div>
                             <span><strong>Chance of winning:</strong></span>
@@ -571,11 +565,11 @@
             chart.append("div")
                 .attr("class", "tick")
                 .style("left", () => {
-                    const d = data.find(d => d.accumulatedVotes >= 270);
+                    const d = data.find(d => d.accumulatedVotes >= 218);
                     if (d) {
-                        const prevVotes = d.accumulatedVotes - d.ev;
-                        const partial = (270 - prevVotes) / d.ev;
-                        const percentage = ((prevVotes / totalVotes) + (partial * d.ev / totalVotes)) * 100;
+                        const prevVotes = d.accumulatedVotes - 1;
+                        const partial = (218 - prevVotes) / 1;
+                        const percentage = ((prevVotes / totalVotes) + (partial * 1 / totalVotes)) * 100;
                         return percentage + "%";
                     }
                     return "0%";
@@ -585,12 +579,12 @@
                 .text("");
 
             d3.select("#majority-label")
-            .style("left", () => {
-                    const d = data.find(d => d.accumulatedVotes >= 270);
+                .style("left", () => {
+                    const d = data.find(d => d.accumulatedVotes >= 218);
                     if (d) {
-                        const prevVotes = d.accumulatedVotes - d.ev;
-                        const partial = (270 - prevVotes) / d.ev;
-                        const percentage = ((prevVotes / totalVotes) + (partial * d.ev / totalVotes)) * 100;
+                        const prevVotes = d.accumulatedVotes - 1;
+                        const partial = (218 - prevVotes) / 1;
+                        const percentage = ((prevVotes / totalVotes) + (partial * 1 / totalVotes)) * 100;
                         return -1.1 + percentage + "%";
                     }
                     return "0%";
@@ -609,9 +603,25 @@
                 .style("position", "relative")
                 .style("width", "100%");
 
-            // Color the states based on margin
+            // Select all state groups (g elements)
+            d3.selectAll("g").each(function () {
+                // Get the state name from the group's id
+                var stateName = this.id;
+
+                // Select all paths within this state group
+                d3.select(this).selectAll("path")
+                    .attr("id", function (d, i) {
+                        // The index (i) starts from 0, so add 1 to get the district number
+                        var districtNumber = i + 1;
+                        // Return the state name concatenated with the district number
+                        return stateName + "-" + districtNumber;
+                    });
+            });
+
             svg.selectAll("path")
-                .data(data, function (d) { return d ? d.State : this.id; })
+                .attr("paint-order", "fill")
+
+                .data(data, function (d) { return d ? d.Code : this.id; })
                 .attr("class", "state")
                 .attr("stroke", function (d) {
                     const margin = d.dem_prob;
@@ -626,26 +636,25 @@
 
                     if (margin > .4 && margin < .6) {
                         d3.select(this)
-                        return "2"
+                        return 3
                     }
                 })
                 .on("mouseover", function (event, d) {
                     d3.select(this)
                         .attr("stroke-linejoin", "square")
                         .attr("stroke", "black")  // Outline in black
-                        .attr("stroke-width", 2.5);  // Increase stroke width
+                        .attr("stroke-width", 5);  // Increase stroke width
                     const tooltip = tools.append("div")
                         .attr("class", "tooltip")
                         .style("left", event.pageX + "px")
                         .style("top", event.pageY + "px")
-                        .html(`<span><strong>${d.id}</strong></span>
+                        .html(`<span><strong>${d.Code}</strong></span>
                         <br>
-                                                    <span id="EV">${d.ev} Electoral Votes</span>
                         <hr>
                         <div>
                             <span><strong>Chance of winning:</strong></span>
-                            <div id="d" ><span style="color:#292929;font-size: 8pt;text-align:left;">Harris:</span>
-<br>${Math.round(100 * d.dem_prob)}%</div><div id="r"><span style="color:#292929;font-size: 8pt;text-align:right;">Trump:</span>
+                            <div id="d" ><span style="color:#292929;font-size: 8pt;text-align:left;"> ${d.DCand} :</span>
+<br>${Math.round(100 * d.dem_prob)}%</div><div id="r"><span style="color:#292929;font-size: 8pt;text-align:right;"> ${d.RCand} :</span>
 <br>${Math.round(100 * d.gop_prob)}%</div><br><br><br></div></div>
                             <div id="bar2" style="background:linear-gradient(90deg, #2798da ${Math.round(100 * d.dem_prob)}%, #ff352c ${Math.round(100 * d.dem_prob)}%)"></div>
                             </div>
@@ -671,17 +680,17 @@
                         })  // Remove outline
                         .attr("stroke-width", function () {
                             if (margin > .4 && margin < .6) {
-                                return "2"
+                                return 2
                             }
                             else {
-                                return "1"
+                                return 1
                             }
                         });  // Revert stroke width
                 })
                 .attr("fill", function (d) {
                     const stateAbbr = this.id.toUpperCase();  // Assuming the SVG uses state abbreviations for IDs
                     const margin = d.dem_prob;
-                  
+
                     return margin !== undefined ? colorScale(margin) : "#ccc";  // Default color if no data
                 });
 

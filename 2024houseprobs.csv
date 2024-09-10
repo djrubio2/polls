@@ -1,0 +1,436 @@
+Code,dem_prob,gop_prob,State,District,DCand,RCand,Incumbent,Held by,PVI,OCand,dFund,rFund,total,2023 PVI,Dist,SamePartyRunOff,Uncontested,Unnamed: 16,Unnamed: 17,Unnamed: 18,demo_margin
+WY-1,0.0,1.0,WY,1,Kyle Cameron,Harriet Hageman,R,R,-25,,,,0,-25,WY@@435,,,,,,
+WI-8,0.199,0.801,WI,8,Kristin Lyerly,Tony Wied,N,R,-10,,,,0,-10,WI-08@@434,,,,,,
+WI-7,0.048,0.952,WI,7,Kyle Kilbourn,Tom Tiffany,R,R,-12,,,,0,-12,WI-07@@433,,,,,,
+WI-6,0.081,0.919,WI,6,John Zarbano,Glenn Grothman,R,R,-10,,,,0,-10,WI-06@@432,,,,,,
+WI-5,0.033,0.967,WI,5,Ben Steinhoff,Scott Fitzgerald,R,R,-14,,,,0,-14,WI-05@@431,,,,,,-22.1
+WI-4,0.997,0.003,WI,4,Gwen Moore,Tim Rogers,D,D,25,,,,0,25,WI-04@@430,,,,,,
+WI-3,0.249,0.751,WI,3,Rebecca Cooke,Derrick Van Orden,R,R,-4,,,,0,-4,WI-03@@429,,,,,,-7.0
+WI-2,0.995,0.005,WI,2,Mark Pocan,Eric Olsen,D,D,19,,,,0,19,WI-02@@428,,,,,,
+WI-1,0.281,0.719,WI,1,Peter Barca,Bryan Steil,R,R,-3,,,,0,-3,WI-01@@427,,,,,,
+WV-2,0.004,0.996,WV,2,Riley Moore,Steven Wendelin,R,R,-22,,,,0,-22,WV-02@@426,,,,,,-13.788807838906001
+WV-1,0.002,0.998,WV,1,Chris Reed,Carol Miller,R,R,-23,,,,0,-23,WV-01@@425,,,,,,-0.7254051758697534
+WA-10,0.877,0.123,WA,10,Marilyn Strickland,Don Hewett,D,D,7,,,,0,7,WA-10@@424,,,,,,10.703510055030234
+WA-9,1.0,0.0,WA,9,Adam Smith,,D,D,21,Melissa Chaudry,,,0,21,WA-09@@423,D,,,,,21.5
+WA-8,0.813,0.187,WA,8,Kim Schrier,Carmen Goers,D,D,1,,,,0,1,WA-08@@422,,,,,,12.2082310633223
+WA-7,1.0,0.0,WA,7,Pramila Jayapal,Dan Alexander,D,D,36,,,,0,36,WA-07@@421,,,,,,14.81145034984724
+WA-6,0.973,0.027,WA,6,Emily Randall,Drew MacEwen,N,D,6,,,,0,6,WA-06@@420,,,,,,3.0448292011905944
+WA-5,0.032,0.968,WA,5,Carmela Conroy,Michael Baumgartner,N,R,-8,,,,0,-8,WA-05@@419,,,,,,6.233351357289412
+WA-4,0.0,1.0,WA,4,,Dan Newhouse,R,R,-11,Jerrod Sessler,,,0,-11,WA-04@@418,R,,,,,-14.588945832681476
+WA-3,0.443,0.557,WA,3,Marien Gluesenkamp Perez,Joe Kent,D,D,-5,,,,0,-5,WA-03@@417,,,,,,8.111686403121528
+WA-2,0.987,0.013,WA,2,Rick Larsen,Cody Hart,D,D,9,,,,0,9,WA-02@@416,,,,,,7.593427416876186
+WA-1,0.995,0.005,WA,1,Suzan Delbene,Jeb Brewer,D,D,13,,,,0,13,WA-01@@415,,,,,,40.06314799489767
+VA-11,0.989,0.011,VA,11,Gerry Conolly,Mike Van Meter,D,D,18,,,,0,18,VA-11@@414,,,,,,
+VA-10,0.841,0.159,VA,10,Suhas Subramanyam,Mike Clancy,N,D,6,,,,0,6,VA-10@@413,,,,,,5.999999999999999
+VA-9,0.005,0.995,VA,9,Karen Baker,Morgan Griffith,R,R,-23,,,,0,-23,VA-09@@412,,,,,,1.0
+VA-8,0.999,0.001,VA,8,Don Beyer,Jerry Torres,D,D,26,,,,0,26,VA-08@@411,,,,,,
+VA-7,0.697,0.303,VA,7,Eugene Vindman,Derrick Anderson,N,D,1,,,,0,1,VA-07@@410,,,,,,1.2199724896315807
+VA-6,0.028,0.972,VA,6,Ken Mitchell,Ben Cline,R,R,-14,,,,0,-14,VA-06@@409,,,,,,-6.999999999999999
+VA-5,0.305,0.695,VA,5,Gloria Witt,John McGuire,N,R,-7,,,,0,-7,VA-05@@408,,,,,,
+VA-4,0.971,0.029,VA,4,Jennifer McClellan,Bill Moher,D,D,16,,,,0,16,VA-04@@407,,,,,,-11.02007526661647
+VA-3,0.994,0.006,VA,3,Bobby Scott,John Sitka,D,D,17,,,,0,17,VA-03@@406,,,,,,
+VA-2,0.308,0.692,VA,2,Missy Cotter Smasal,Jen Kiggans,R,R,-2,,,,0,-2,VA-02@@405,,,,,,
+VA-1,0.164,0.836,VA,1,Rob Wittman,Leslie Mehta,R,R,-6,,,,0,-6,VA-01@@404,,,,,,
+VT-1,0.986,0.014,VT,1,Becca Balint,Mark Coester,D,D,16,,,,0,16,VT@@403,,,,,,
+UT-4,0.014,0.986,UT,4,Katrina Fallick-Wang,Burgess Owens,R,R,-16,,,,0,-16,UT-04@@402,,,,,,
+UT-3,0.116,0.884,UT,3,Glenn Wright,Mike Kennedy,N,R,-13,,,,0,-13,UT-03@@401,,,,,,-22.1
+UT-2,0.044,0.956,UT,2,Celeste Maloy,Nathaniel Woodward,R,R,-11,,,,0,-11,UT-02@@400,,,,,,
+UT-1,0.049,0.951,UT,1,Bill Campbell,Blake Moore,R,R,-12,,,,0,-12,UT-01@@399,,,,,,
+TX-38,0.057,0.943,TX,38,Melissa McDonough,Wesley Hunt,R,R,-12,,,,0,-12,TX-38@@398,,,,,,
+TX-37,0.999,0.001,TX,37,Lloyd Doggett,Jenny Garcia Sharon,D,D,24,,,,0,24,TX-37@@397,,,,,,8.019087314869266
+TX-36,0.014,0.986,TX,36,Dayna Steele,Brian Babin,R,R,-18,,,,0,-18,TX-36@@396,,,,,,
+TX-35,0.996,0.004,TX,35,Greg Casar,Steven Wright,D,D,21,,,,0,21,TX-35@@395,,,,,,
+TX-34,0.897,0.103,TX,34,Vicente Gonzales,Maryla Flores,D,D,9,,,,0,9,TX-34@@394,,,,,,-1.0000000000000009
+TX-33,0.999,0.001,TX,33,Marc Veasey,Patrick Gillespie,D,D,24,,,,0,24,TX-33@@393,,,,,,27.0
+TX-32,0.972,0.028,TX,32,Julie Johnson,Darell Day,N,D,14,,,,0,14,TX-32@@392,,,,,,
+TX-31,0.025,0.975,TX,31,Stuart Whitlow,John Carter,R,R,-14,,,,0,-14,TX-31@@391,,,,,,
+TX-30,0.998,0.002,TX,30,Jasmine Crockett,NONE,D,D,27,Jmar Jefferson,,,0,27,TX-30@@390,,C,,,,
+TX-29,0.994,0.006,TX,29,Sylvia Garcia,Alan Garza,D,D,18,,,,0,18,TX-29@@389,,,,,,-1.0000000000000009
+TX-28,0.769,0.231,TX,28,Henry Cuellar,Jay Furman,D,D,3,,,,0,3,TX-28@@388,,,,,,
+TX-27,0.031,0.969,TX,27,Tanya Lloyd,Michael Cloud,R,R,-13,,,,0,-13,TX-27@@387,,,,,,
+TX-26,0.113,0.887,TX,26,Ernest Lineberger III,Brandon Gill,N,R,-13,,,,0,-13,TX-26@@386,,,,,,
+TX-25,0.005,0.995,TX,25,,Roger Williams,R,R,-19,,,,0,-19,TX-25@@385,,,,,,
+TX-24,0.073,0.927,TX,24,Sam Eppler,Beth Van Duyne,R,R,-10,,,,0,-10,TX-24@@384,,,,,,
+TX-23,0.192,0.808,TX,23,Santos Limon,Tony Gonzales,R,R,-5,,,,0,-5,TX-23@@383,,,,,,
+TX-22,0.059,0.941,TX,22,Marquette Greene-Scott,Troy Nehls,R,R,-11,,,,0,-11,TX-22@@382,,,,,,-17.0
+TX-21,0.038,0.962,TX,21,Kristin Hook,Chip Roy,R,R,-13,,,,0,-13,TX-21@@381,,,,,,
+TX-20,0.985,0.015,TX,20,Joaquin Castro,NONE,D,D,15,,,,0,15,TX-20@@380,,D,,,,
+TX-19,0.0,1.0,TX,19,NONE,Jodey Arrington,R,R,-26,,,,0,-26,TX-19@@379,,R,,,,
+TX-18,1.0,0.0,TX,18,Sylvester Turner,Lana Centonze,N,D,23,,,,0,23,TX-18@@378,,,,,,
+TX-17,0.037,0.963,TX,17,Mark Lorenzen,Pete Sessions,R,R,-14,,,,0,-14,TX-17@@377,,,,,,
+TX-16,0.983,0.017,TX,16,Veronica Escobar,Irene Armendariz-Jackson,D,D,17,,,,0,17,TX-16@@376,,,,,,-1.0000000000000009
+TX-15,0.362,0.638,TX,15,Michelle Vallejo,Monica De La Cruz,R,R,-1,,,,0,-1,TX-15@@375,,,,,,-1.0000000000000009
+TX-14,0.011,0.989,TX,14,Rhonda Hart,Randy Weber,R,R,-17,,,,0,-17,TX-14@@374,,,,,,
+TX-13,0.0,1.0,TX,13,NONE,Ronny Jackson,R,R,-26,,,,0,-26,TX-13@@373,,R,,,,
+TX-12,0.143,0.857,TX,12,Trey Hunt,Craig Goldman,N,R,-12,,,,0,-12,TX-12@@372,,,,,,
+TX-11,0.0,1.0,TX,11,NONE,August Pfluger,R,R,-23,,,,0,-23,TX-11@@371,,R,,,,
+TX-10,0.032,0.968,TX,10,Theresa Boisseau,Michael McCaul,R,R,-13,,,,0,-13,TX-10@@370,,,,,,
+TX-9,1.0,0.0,TX,9,Al Green,NONE,D,D,26,,,,0,26,TX-09@@369,,D,,,,
+TX-8,0.019,0.981,TX,8,Laura Jones,Morgan Luttrell,R,R,-16,,,,0,-16,TX-08@@368,,,,,,2.0
+TX-7,0.964,0.036,TX,7,Lizzie Fletcher,Caroline Kane,D,D,13,,,,0,13,TX-07@@367,,,,,,
+TX-6,0.026,0.974,TX,6,John Love III,Jake Ellzey,R,R,-15,,,,0,-15,TX-06@@366,,,,,,2.0
+TX-5,0.035,0.965,TX,5,Ruth Torres,Lance Gooden,R,R,-14,,,,0,-14,TX-05@@365,,,,,,2.0
+TX-4,0.022,0.978,TX,4,Simon Cardell,Pat Fallon,R,R,-16,,,,0,-16,TX-04@@364,,,,,,
+TX-3,0.052,0.948,TX,3,Sandeep Srivastava,Keith Self,R,R,-11,,,,0,-11,TX-03@@363,,,,,,
+TX-2,0.014,0.986,TX,2,Pete Filler,Dan Crenshaw,R,R,-15,,,,0,-15,TX-02@@362,,,,,,
+TX-1,0.0,1.0,TX,1,NONE,Nathaniel Moran,R,R,-26,,,,0,-26,TX-01@@361,,R,,,,10.119472430405565
+TN-9,0.999,0.001,TN,9,Steve Cohen,Charlotte Bergmann,D,D,22,,,,0,22,TN-09@@360,,,,,,1.0
+TN-8,0.005,0.995,TN,8,Sarah Freeman,David Kustoff,R,R,-21,,,,0,-21,TN-08@@359,,,,,,
+TN-7,0.101,0.899,TN,7,Megan Barry,Mark Green,R,R,-10,,,,0,-10,TN-07@@358,,,,,,6.011847039388277
+TN-6,0.006,0.994,TN,6,Lore Bergman,John Rose,R,R,-17,,,,0,-17,TN-06@@357,,,,,,
+TN-5,0.094,0.906,TN,5,Maryam Abolfazli,Andy Ogles,R,R,-9,,,,0,-9,TN-05@@356,,,,,,
+TN-4,0.003,0.997,TN,4,Victoria Broderick,Scott DesJarlais,R,R,-22,,,,0,-22,TN-04@@355,,,,,,
+TN-3,0.005,0.995,TN,3,Jack Allen,Chuck Fleischman,R,R,-19,,,,0,-19,TN-03@@354,,,,,,
+TN-2,0.011,0.989,TN,2,Jane George,Tim Burchett,R,R,-18,,,,0,-18,TN-02@@353,,,,,,
+TN-1,0.0,1.0,TN,1,Kevin Jinkins,Diana Harshbarger,R,R,-30,,,,0,-30,TN-01@@352,,,,,,
+SD-1,0.011,0.989,SD,1,Sheryl Johnson,Dusty Johnson,R,R,-16,,,,0,-16,SD@@351,,,,,,
+SC-7,0.05,0.95,SC,7,Mal Hyman,Russell Fry,R,R,-11,,,,0,-11,SC-07@@350,,,,,,-26.0
+SC-6,0.961,0.039,SC,6,Jim Clyburn,Duke Buckner,D,D,14,,,,0,14,SC-06@@349,,,,,,1.0
+SC-5,0.039,0.961,SC,5,Evangeline Hundley,Ralph Norman,R,R,-12,,,,0,-12,SC-05@@348,,,,,,-26.0
+SC-4,0.052,0.948,SC,4,Kayhryn Harvey,William Timmons,R,R,-12,,,,0,-12,SC-04@@347,,,,,,7.0
+SC-3,0.028,0.972,SC,3,Bryon Best,Sheri Biggs,N,R,-21,Michael Bedenbaugh,,,0,-21,SC-03@@346,,,,,,-6.9091000507700695
+SC-2,0.137,0.863,SC,2,David Robinson II,Joe Wilson,R,R,-8,,,,0,-8,SC-02@@345,,,,,,6.000679563203929
+SC-1,0.153,0.847,SC,1,Michael Moore,Nancy Mace,R,R,-7,,,,0,-7,SC-01@@344,,,,,,
+RI-2,0.783,0.217,RI,2,Seth Magaziner,Steve Corvi,D,D,4,,,,0,4,RI-02@@343,,,,,,
+RI-1,0.953,0.047,RI,1,Gabe Amo,Jeffery Lemire,D,D,12,,,,0,12,RI-01@@342,,,,,,0.0
+PA-17,0.773,0.227,PA,17,Chris Ddeluzio,Rob Mercuri,D,D,0,,,,0,EVEN,PA-17@@341,,,,,,-7.0
+PA-16,0.04,0.96,PA,16,Preston Nouri,Mike Kelly,R,R,-13,,,,0,-13,PA-16@@340,,,,,,
+PA-15,0.002,0.998,PA,15,Zacheray Womer,Glenn THompson,R,R,-21,,,,0,-21,PA-15@@339,,,,,,
+PA-14,0.008,0.992,PA,14,Christopher Dziados,Guy Reschenthler,R,R,-18,,,,0,-18,PA-14@@338,,,,,,
+PA-13,0.0,1.0,PA,13,John Joyce,Beth Farnham,R,R,-25,,,,0,-25,PA-13@@337,,,,,,
+PA-12,0.85,0.15,PA,12,Summer Lee,James Hayes,D,D,8,,,,0,8,PA-12@@336,,,,,,-18.248279726697234
+PA-11,0.049,0.951,PA,11,Jim Atkinson,Lloyd Smucker,R,R,-13,,,,0,-13,PA-11@@335,,,,,,
+PA-10,0.196,0.804,PA,10,Janelle Stelson,Scott Perry,R,R,-5,,,,0,-5,PA-10@@334,,,,,,-7.0
+PA-9,0.001,0.999,PA,9,Amanda Waldman,Dan Meuser,R,R,-21,,,,0,-21,PA-09@@333,,,,,,
+PA-8,0.474,0.526,PA,8,Matt Cartwright,Rob Breshahan Jr.,D,D,-4,,,,0,-4,PA-08@@332,,,,,,2.536100245285739
+PA-7,0.659,0.341,PA,7,Susan Wild,Ryan Mackenzie,D,D,-2,,,,0,-2,PA-07@@331,,,,,,
+PA-6,0.803,0.197,PA,6,Chrissy Houlahan,Neil Young Jr,D,D,5,,,,0,5,PA-06@@330,,,,,,-7.0
+PA-5,0.972,0.028,PA,5,Mary Gay Scanlon,Alfeia DeVaughn-Goodwin,D,D,14,,,,0,14,PA-05@@329,,,,,,0.8920281783893721
+PA-4,0.856,0.144,PA,4,Madeline Dean,David Winkley,D,D,7,,,,0,7,PA-04@@328,,,,,,-6.999999999999999
+PA-3,1.0,0.0,PA,3,Dwight Evans,NONE,D,D,39,,,,0,39,PA-03@@327,,D,,,,1.9999999999999991
+PA-2,0.991,0.009,PA,2,Brendan Boyle,Haroon Bashir,D,D,20,,,,0,20,PA-02@@326,,,,,,
+PA-1,0.398,0.602,PA,1,Brian Fitzpatrick,Ashley Ehasz,R,R,0,,,,0,EVEN,PA-01@@325,,,,,,-6.999999999999999
+OR-6,0.8,0.2,OR,6,Andrea Salinas,Mike Erickson,D,D,4,,,,0,4,OR-06@@324,,,,,,14.905670733055814
+OR-5,0.546,0.454,OR,5,Janelle Bynum,Lori Chavez DeRemer,R,R,2,,,,0,2,OR-05@@323,,,,,,9.526323913509636
+OR-4,0.789,0.211,OR,4,Val Hoyle,Monique DeSpain,D,D,4,,,,0,4,OR-04@@322,,,,,,3.487999382814574
+OR-3,0.997,0.003,OR,3,Maxine Dexter,Joanna Harbour,N,D,22,,,,0,22,OR-03@@321,,,,,,12.5330993015106
+OR-2,0.083,0.917,OR,2,Cliff Bentz,Dan Ruby,D,D,-15,,,,0,-15,OR-02@@320,,,,,,-6.432493387909753
+OR-1,0.991,0.009,OR,1,Suzanne Bonamici,Bob Todd,D,D,18,,,,0,18,OR-01@@319,,,,,,12.987591879763462
+OK-5,0.051,0.949,OK,5,Madison Horn,Stephanie Bice,R,R,-12,,,,0,-12,OK-05@@318,,,,,,5.0
+OK-4,0.006,0.994,OK,4,Mary Brannon,Tom Cole,R,R,-19,,,,0,-19,OK-04@@317,,,,,,-21.0
+OK-3,0.001,0.999,OK,3,,Frank Lucas,R,R,-24,,,,0,-24,OK-03@@316,,,,,,
+OK-2,0.0,1.0,OK,2,Brandon Wade,Josh Brecheen,R,R,-29,,,,0,-29,OK-02@@315,,,,,,-3.461598640044414
+OK-1,0.032,0.968,OK,1,Dennis Baker,Kevin Hern,R,R,-14,,,,0,-14,OK-01@@314,,,,,,-8.305562568217365
+OH-15,0.18,0.82,OH,15,Adam Miller,Mike Carey,R,R,-6,,,,0,-6,OH-15@@313,,,,,,-0.9933945436293786
+OH-14,0.082,0.918,OH,14,Brian Kenderes,David Joyce,R,R,-9,,,,0,-9,OH-14@@312,,,,,,5.0
+OH-13,0.598,0.402,OH,13,Emilia Sykes,Kevin Coughlin,D,D,-1,,,,0,-1,OH-13@@311,,,,,,-0.8317019743313252
+OH-12,0.009,0.991,OH,12,Jerrad Christian,Troy Balderson,R,R,-18,,,,0,-18,OH-12@@310,,,,,,
+OH-11,1.0,0.0,OH,11,Shontel Brown,Alan Rapoport,D,D,28,,,,0,28,OH-11@@309,,,,,,
+OH-10,0.26,0.74,OH,10,Amy Cox,Mike Turner,R,R,-4,,,,0,-4,OH-10@@308,,,,,,2.508201617892828
+OH-9,0.75,0.25,OH,9,Mary Kaptur,Derek Merrin,D,D,-3,,,,0,-3,OH-09@@307,,,,,,-1.0
+OH-8,0.023,0.977,OH,8,Vanessa Enoch,Warren Davidson,R,R,-14,,,,0,-14,OH-08@@306,,,,,,5.0
+OH-7,0.158,0.842,OH,7,Matt Diemer,Max Miller,R,R,-7,Dennis Kucinich,,,0,-7,OH-07@@305,,,,,,-2.3453495890302234
+OH-6,0.019,0.981,OH,6,Michael Kripchak,Michael Rulli,R,R,-16,,,,0,-16,OH-06@@304,,,,,,
+OH-5,0.016,0.984,OH,5,Keith Mundy,Bob Latta,R,R,-15,,,,0,-15,OH-05@@303,,,,,,
+OH-4,0.001,0.999,OH,4,Tamie Wilson,Jim Jordan,R,R,-20,,,,0,-20,OH-04@@302,,,,,,
+OH-3,0.989,0.011,OH,3,Joyce Beatty,Michael Young,D,D,20,,,,0,20,OH-03@@301,,,,,,-14.656721878259354
+OH-2,0.004,0.996,OH,2,Samantha Meadows,Brad Wenstrup,N,R,-25,,,,0,-25,OH-02@@300,,,,,,
+OH-1,0.726,0.274,OH,1,Greg Landsman,Orlando Sonza,D,D,2,,,,0,2,OH-01@@299,,,,,,3.0
+ND-1,0.0,1.0,ND,1,Trygve Hammer,Julie Fedorchak,N,R,-20,,,,0,-20,ND@@298,,,,,,
+NC-14,0.125,0.875,NC,14,Pam Genant,Tim Moore,N,D,-11,,,,0,6,NC-14@@297,,,,,,-39.0
+NC-13,0.164,0.836,NC,13,Frank Pierce,Brad Knott,N,D,-11,,,,0,-2,NC-13@@296,,,,,,
+NC-12,0.997,0.003,NC,12,Alma Adams,Addul Ali,D,D,23,,,,0,13,NC-12@@295,,,,,,
+NC-11,0.109,0.891,NC,11,Caleb Rudow,Chuck Edwards,R,R,-8,,,,0,-8,NC-11@@294,,,,,,-7.0
+NC-10,0.198,0.802,NC,10,Ralph Scott Jr.,Pat Harrigan,N,R,-10,,,,0,-22,NC-10@@293,,,,,,
+NC-9,0.086,0.914,NC,9,Nigel Bristow,Richard Hudson,R,R,-9,,,,0,-6,NC-09@@292,,,,,,-14.131181742827398
+NC-8,0.17,0.83,NC,8,Justin Dues,Dan Bishop,N,R,-11,,,,0,-20,NC-08@@291,,,,,,-7.0
+NC-7,0.134,0.866,NC,7,Marlando Pridgen,David Rouzer,R,R,-8,,,,0,-8,NC-07@@290,,,,,,0.0
+NC-6,0.07,0.93,NC,6,,Addison McDowell,R,R,-11,,,,0,4,NC-06@@289,,,,,,0.539084848078832
+NC-5,0.081,0.919,NC,5,Chuck Hubbard,Virginia Foxx,R,R,-10,,,,0,-13,NC-05@@288,,,,,,1.098342842140269
+NC-4,0.997,0.003,NC,4,Valerie Foushee,Eric Blankenburg,D,D,21,,,,0,16,NC-04@@287,,,,,,
+NC-3,0.075,0.925,NC,3,,Greg Murphy,R,R,-11,,,,0,-15,NC-03@@286,,,,,,7.228101021737554
+NC-2,0.978,0.022,NC,2,Deborah Ross,Alain Swain,D,D,15,,,,0,12,NC-02@@285,,,,,,7.228101021737553
+NC-1,0.603,0.397,NC,1,Don Davis,Laurie Buckhout,D,D,-1,,,,0,2,NC-01@@284,,,,,,6.000000000000001
+NY-26,0.904,0.096,NY,26,Tim Kennedy,Anthony Marecki,D,D,9,,,,0,9,NY-26@@283,,,,,,0.5018259439114162
+NY-25,0.875,0.125,NY,25,Joseph Morelle,Gregg Sadwick,D,D,7,,,,0,7,NY-25@@282,,,,,,6.0
+NY-24,0.039,0.961,NY,24,Claudia Tenney,David Wagenhauser,R,R,-13,,,,0,-11,NY-24@@281,,,,,,
+NY-23,0.057,0.943,NY,23,Thomas Carle,Nick Langworthy,R,R,-12,,,,0,-12,NY-23@@280,,,,,,1.9999999999999993
+NY-22,0.562,0.438,NY,22,John Mannion,Brandon Williams,R,R,3,,,,0,1,NY-22@@279,,,,,,7.228101021737553
+NY-21,0.083,0.917,NY,21,Elise Stefanik,Paula Collins,R,R,-10,,,,0,-9,NY-21@@278,,,,,,7.228101021737553
+NY-20,0.876,0.124,NY,20,Paul Tonko,Kevin Waltz,D,D,7,,,,0,7,NY-20@@277,,,,,,1.9999999999999991
+NY-19,0.351,0.649,NY,19,Josh Riley,Marc Molinaro,R,R,-1,,,,0,EVEN,NY-19@@276,,,,,,0.0
+NY-18,0.708,0.292,NY,18,Pat Ryan,Alison Esposito,D,D,2,,,,0,1,NY-18@@275,,,,,,1.0
+NY-17,0.358,0.642,NY,17,Mondaire Jones,Mike Lawler,R,R,3,,,,0,3,NY-17@@274,,,,,,1.0
+NY-16,0.992,0.008,NY,16,George Latimer,Miriam Levitt Flisser,N,D,21,,,,0,20,NY-16@@273,,,,,,-3.5220221324060588
+NY-15,1.0,0.0,NY,15,Ritchie Torres,Gonzalo Duran,D,D,35,,,,0,35,NY-15@@272,,,,,,
+NY-14,0.999,0.001,NY,14,Alexandria Ocasio-Cortez,Tina Forte,D,D,27,,,,0,28,NY-14@@271,,,,,,
+NY-13,1.0,0.0,NY,13,Adriano Espaillat,Ruben Vargas ,D,D,38,,,,0,38,NY-13@@270,,,,,,-6.432493387909753
+NY-12,1.0,0.0,NY,12,Jerry Nadler,Michael Zumbluskas,D,D,34,,,,0,34,NY-12@@269,,,,,,
+NY-11,0.164,0.836,NY,11,Nicole Malliotakis ,Andrea Morse,R,R,-6,,,,0,-6,NY-11@@268,,,,,,-2.2233752162585176
+NY-10,1.0,0.0,NY,10,Dan Goldman,Alex Dodenhoff,D,D,35,,,,0,35,NY-10@@267,,,,,,
+NY-9,1.0,0.0,NY,9,Yvette Clarke,Menachem Raitport,D,D,25,,,,0,25,NY-09@@266,,,,,,
+NY-8,0.999,0.001,NY,8,Hakeem Jeffries ,John Delaney,D,D,26,,,,0,26,NY-08@@265,,,,,,1.2199724896315807
+NY-7,1.0,0.0,NY,7,Nydia Velázquez,William Kregler,D,D,31,,,,0,31,NY-07@@264,,,,,,1.2199724896315807
+NY-6,0.976,0.024,NY,6,Grace Meng,Thomas Zmich,D,D,15,,,,0,15,NY-06@@263,,,,,,1.9999999999999991
+NY-5,1.0,0.0,NY,5,Gregory Meeks,Paul King,D,D,30,,,,0,30,NY-05@@262,,,,,,7.228101021737554
+NY-4,0.611,0.389,NY,4,Laura Gillen,Anthony D'Esposito,R,R,5,,,,0,5,NY-04@@261,,,,,,
+NY-3,0.695,0.305,NY,3,Tom Suozzi,Michael LiPetri,D,D,2,,,,0,2,NY-03@@260,,,,,,-7.000000000000001
+NY-2,0.24,0.76,NY,2,Rob Lubin,Andrew Garbarino,R,R,-3,,,,0,-3,NY-02@@259,,,,,,
+NY-1,0.296,0.704,NY,1,John Avlon,Nick LaLota,R,R,-3,,,,0,-3,NY-01@@258,,,,,,1.2199724896315807
+NM-3,0.781,0.219,NM,3,Teresa Leger Fernandez,Sharon Clahchischilliage,D,D,4,,,,0,4,NM-03@@257,,,,,,
+NM-2,0.499,0.501,NM,2,Gabe Vasquez,Yvette Herrell,D,D,1,,,,0,1,NM-02@@256,,,,,,1.2199724896315807
+NM-1,0.791,0.209,NM,1,Melanie Stansbury,Steve Jones,D,D,5,,,,0,5,NM-01@@255,,,,,,0.2348205556933998
+NJ-12,0.959,0.041,NJ,12,Bonnie Watson Coleman,Darius Mayfield ,D,D,12,,,,0,12,NJ-12@@254,,,,,,
+NJ-11,0.855,0.145,NJ,11,Mikie Sherrill ,Joseph Belnome,D,D,6,,,,0,6,NJ-11@@253,,,,,,
+NJ-10,1.0,0.0,NJ,10,LaMonica McIver ,Carmen Bucco,D,D,30,,,,0,30,NJ-10@@252,,,,,,-2.0
+NJ-9,0.89,0.11,NJ,9,Nellie Pou,Billy Prempeh,N,D,8,,,,0,8,NJ-09@@251,,,,,,
+NJ-8,0.999,0.001,NJ,8,Rob Menendez,Anthony Valdes,D,D,22,,,,0,22,NJ-08@@250,,,,,,
+NJ-7,0.359,0.641,NJ,7,Sue Altman,Tom Kean Jr.,R,R,-1,,,,0,-1,NJ-07@@249,,,,,,
+NJ-6,0.883,0.117,NJ,6,Frank Pallone,Scott Fegler ,D,D,8,,,,0,8,NJ-06@@248,,,,,,-6.432493387909753
+NJ-5,0.75,0.25,NJ,5,Josh Gottheimer,Mary Jo Guinchard,D,D,4,,,,0,4,NJ-05@@247,,,,,,-8.187817372623172
+NJ-4,0.03,0.97,NJ,4,Matthew Jenkins,Chris Smith,R,R,-14,,,,0,-14,NJ-04@@246,,,,,,-9.51982074064499
+NJ-3,0.815,0.185,NJ,3,Herb Conaway,Rajesh Mohan,N,D,5,,,,0,5,NJ-03@@245,,,,,,7.919597832798823
+NJ-2,0.239,0.761,NJ,2,Joe Salerno,Jeff Van Drew,R,R,-5,,,,0,-5,NJ-02@@244,,,,,,5.0
+NJ-1,0.91,0.09,NJ,1,Donald Norcross,Teddy Liddell,D,D,10,,,,0,10,NJ-01@@243,,,,,,-5.120761699488091
+NH-2,0.69,0.31,NH,2,a Democrat,a Republican,N,D,2,,,,0,2,NH-02@@242,,,,,,-4.5612210901826495
+NH-1,0.661,0.339,NH,1,Chris Pappas,a Republican,D,D,0,,,,0,EVEN,NH-01@@241,,,50.0,50.0,,5.0
+NV-4,0.845,0.155,NV,4,Steven Horsford,John Lee,D,D,3,,,,0,3,NV-04@@240,,,51.5,48.5,,7.0
+NV-3,0.849,0.151,NV,3,Susie Lee,Drew Johnson,D,D,1,,,,0,1,NV-03@@239,,,50.5,49.5,,-26.0
+NV-2,0.001,0.999,NV,2,NONE,Mark Amodei,R,R,-8,Others,,,0,-8,NV-02@@238,,,46.0,54.0,,7.0
+NV-1,0.902,0.098,NV,1,Dina Titus,Mark Robertson,D,D,3,,,,0,3,NV-01@@237,,,51.5,48.5,,2.0946878036157166
+NE-3,0.0,1.0,NE,3,Daniel Ebers,Adrian Smith,R,R,-29,,,,0,-29,NE-03@@236,,,35.5,64.5,,-6.661941273738712
+NE-2,0.563,0.437,NE,2,Tony Vargas,Don Bacon,R,R,0,,,,0,EVEN,NE-02@@235,,,50.0,50.0,,10.0
+NE-1,0.091,0.909,NE,1,Carol Brood,Mike Flood,R,R,-9,,,,0,-9,NE-01@@234,,,45.5,54.5,,
+MT-2,0.023,0.977,MT,2,John Driscoll ,Troy Downing ,N,R,-16,,,,0,-16,MT-02@@233,,,42.0,58.0,,-7.0686724796134675
+MT-1,0.258,0.742,MT,1,Monica Tranel,Ryan Zinke,R,R,-6,,,,0,-6,MT-01@@232,,,47.0,53.0,,-0.4087394379246439
+MO-8,0.002,0.998,MO,8,Jason Smith,Randi McCallian,R,R,-28,,,,0,-28,MO-08@@231,,,36.0,64.0,,10.119472430405565
+MO-7,0.001,0.999,MO,7,Missi Hesketh,Eric Burlison,R,R,-24,,,,0,-24,MO-07@@230,,,38.0,62.0,,
+MO-6,0.004,0.996,MO,6,Pam May,Sam Graves,R,R,-21,,,,0,-21,MO-06@@229,,,39.5,60.5,,1.0
+MO-5,0.945,0.055,MO,5,Emanuel Cleaver,Sean Smith,D,D,11,,,,0,11,MO-05@@228,,,55.5,44.5,,
+MO-4,0.0,1.0,MO,4,Jeanette Cass,Mark Alford,R,R,-23,,,,0,-23,MO-04@@227,,,38.5,61.5,,
+MO-3,0.066,0.934,MO,3,Bethany Mann,Bob Onder,N,R,-16,,,,0,-16,MO-03@@226,,,42.0,58.0,,
+MO-2,0.148,0.852,MO,2,Ray Hartmann,Ann Wagner,R,R,-7,,,,0,-7,MO-02@@225,,,46.5,53.5,,
+MO-1,1.0,0.0,MO,1,Wesley Bell,Andrew Jones,N,D,27,,,,0,27,MO-01@@224,,,63.5,36.5,,-39.0
+MS-4,0.001,0.999,MS,4,Craig Raybon,Mike Ezell ,R,R,-22,,,,0,-22,MS-04@@223,,,39.0,61.0,,
+MS-3,0.023,0.977,MS,3,NONE,Michael Guest,R,R,-15,,,,0,-15,MS-03@@222,,,42.5,57.5,,
+MS-2,0.938,0.062,MS,2,Bennie Thompson ,Ron Eller,D,D,11,,,,0,11,MS-02@@221,,,55.5,44.5,,3.0
+MS-1,0.006,0.994,MS,1,Dianne Black,Trent Kelly,R,R,-18,,,,0,-18,MS-01@@220,,,41.0,59.0,,
+MN-8,0.1,0.9,MN,8,Jennifer Schultz,Pete Stauber,R,R,-8,,,,0,-8,MN-08@@219,,,46.0,54.0,,-22.1
+MN-7,0.009,0.991,MN,7,A. J. Peters,Michelle Fischbach,R,R,-19,,,,0,-19,MN-07@@218,,,40.5,59.5,,-22.1
+MN-6,0.045,0.955,MN,6,Jeanne Hendricks,Tom Emmer,R,R,-12,,,,0,-12,MN-06@@217,,,44.0,56.0,,-7.0
+MN-5,1.0,0.0,MN,5,Ilhan Omar,Dalia al-Aqidi,D,D,30,,,,0,30,MN-05@@216,,,65.0,35.0,,7.919597832798823
+MN-4,0.992,0.008,MN,4,Betty McCollum,May Lor Xiong,D,D,17,,,,0,17,MN-04@@215,,,58.5,41.5,,
+MN-3,0.89,0.11,MN,3,Kelly Morrison,Tad Jude,N,D,8,,,,0,8,MN-03@@214,,,54.0,46.0,,-7.0
+MN-2,0.693,0.307,MN,2,Angie Craig,Joe Teirab,D,D,1,,,,0,1,MN-02@@213,,,50.5,49.5,,
+MN-1,0.134,0.866,MN,1,Rachel Bohman,Brad Finstad,R,R,-7,,,,0,-7,MN-01@@212,,,46.5,53.5,,
+MI-13,1.0,0.0,MI,13,Shri Thanedar,Martell Bivings,D,D,23,,,,0,23,MI-13@@211,,,61.5,38.5,,
+MI-12,0.999,0.001,MI,12,Rashida Tlaib ,James Hooper,D,D,23,,,,0,23,MI-12@@210,,,61.5,38.5,,
+MI-11,0.879,0.121,MI,11,Haley Stevens,Nick Somberg ,D,D,7,,,,0,7,MI-11@@209,,,53.5,46.5,,
+MI-10,0.452,0.548,MI,10,Carl Marlinga,John James,,R,-3,,,,0,-3,MI-10@@208,,,48.5,51.5,,-13.808897311726057
+MI-9,0.009,0.991,MI,9,Kristen McDonald Rivet,Lisa McClain,R,R,-18,,,,0,-18,MI-09@@207,,,41.0,59.0,,
+MI-8,0.514,0.486,MI,8,Kristen McDonald Rivet,Paul Junge,N,D,-1,,,,0,-1,MI-08@@206,,,49.5,50.5,,5.0
+MI-7,0.316,0.684,MI,7,Curtis Hertel Jr.,Tom Barrett,N,D,-2,,,,0,-2,MI-07@@205,,,49.0,51.0,,3.0
+MI-6,0.939,0.061,MI,6,Debbie Dingell,Heather Smiley,D,D,11,,,,0,11,MI-06@@204,,,55.5,44.5,,-7.0
+MI-5,0.02,0.98,MI,5,Libbi Urban,Tim Walberg,R,R,-15,,,,0,-15,MI-05@@203,,,42.5,57.5,,
+MI-4,0.205,0.795,MI,4,Bill Huizenga,Jessica Swartz ,R,R,-5,,,,0,-5,MI-04@@202,,,47.5,52.5,,-1.2595728436738116
+MI-3,0.62,0.38,MI,3,Hillary Scholten,Paul Hudson,D,D,1,,,,0,1,MI-03@@201,,,50.5,49.5,,-21.474181421117915
+MI-2,0.016,0.984,MI,2,Michael Lynch,John Moolenaar,R,R,-16,,,,0,-16,MI-02@@200,,,42.0,58.0,,
+MI-1,0.034,0.966,MI,1,Callie Barr,Jack Bergman,R,R,-13,,,,0,-13,MI-01@@199,,,43.5,56.5,,-22.1
+MA-9,0.849,0.151,MA,9,Bill Keating ,Dan Sullivan,D,D,6,,,,0,6,MA-09@@198,,,53.0,47.0,,
+MA-8,0.973,0.027,MA,8,Stephen Lynch,Rober Burke,D,D,15,,,,0,15,MA-08@@197,,,57.5,42.5,,-2.0000000000000004
+MA-7,1.0,0.0,MA,7,Ayanna Pressley,NONE,D,D,35,,,,0,35,MA-07@@196,,D,67.5,32.5,,6.0
+MA-6,0.944,0.056,MA,6,Seth Moulton,NONE,D,D,11,,,,0,11,MA-06@@195,,D,55.5,44.5,,
+MA-5,0.995,0.005,MA,5,Katherine Clark,NONE,D,D,23,,,,0,23,MA-05@@194,,D,61.5,38.5,,-7.0
+MA-4,0.955,0.045,MA,4,Jake Auchincloss,NONE,D,D,12,,,,0,12,MA-04@@193,,D,56.0,44.0,,7.919597832798823
+MA-3,0.936,0.064,MA,3,Lori Trahan,NONE,D,D,11,,,,0,11,MA-03@@192,,D,55.5,44.5,,1.9999999999999993
+MA-2,0.953,0.047,MA,2,Jim McGovern,NONE,D,D,13,,,,0,13,MA-02@@191,,D,56.5,43.5,,0.3040043764369058
+MA-1,0.92,0.08,MA,1,Richard Neal,NONE,D,D,9,,,,0,9,MA-01@@190,,D,54.5,45.5,,7.919597832798823
+MD-8,1.0,0.0,MD,8,Jamie Raskin ,Cheryl Riley ,D,D,29,,,,0,29,MD-08@@189,,,64.5,35.5,,
+MD-7,1.0,0.0,MD,7,Kweisi Mfume ,Scott Collier ,D,D,30,,,,0,30,MD-07@@188,,,65.0,35.0,,3.0
+MD-6,0.588,0.412,MD,6,April McClain-Delaney,Neil Parrott,N,D,2,,,,0,2,MD-06@@187,,,51.0,49.0,,-6.999999999999999
+MD-5,0.976,0.024,MD,5,Steny Hoyer,Michelle Talkington,D,D,15,,,,0,15,MD-05@@186,,,57.5,42.5,,4.595885053673218
+MD-4,1.0,0.0,MD,4,Glenn Ivey,George McDermott,D,D,40,,,,0,40,MD-04@@185,,,70.0,30.0,,-2.5761782443703085
+MD-3,0.928,0.072,MD,3,Sarah Elfreth,Robert Steinberger,N,D,10,,,,0,10,MD-03@@184,,,55.0,45.0,,3.5693749541501796
+MD-2,0.867,0.133,MD,2,Johnny Olszewski,Kimberly Klacik ,N,D,7,,,,0,7,MD-02@@183,,,53.5,46.5,,-2.534808561425383
+MD-1,0.061,0.939,MD,1,Blane Miller ,Andy Harris,R,R,-11,,,,0,-11,MD-01@@182,,,44.5,55.5,,-7.0
+ME-2,0.347,0.653,ME,2,Jared Golden,Austin Theriault ,D,D,-6,,,,0,-6,ME-02@@181,,,47.0,53.0,,-7.0
+ME-1,0.908,0.092,ME,1,Chellie Pingree,Ronald Russell ,D,D,9,,,,0,9,ME-01@@180,,,54.5,45.5,,0.23482055569339977
+LA-6,0.876,0.124,LA,6,,,,D,8,,,,0,-19,LA-06@@179,,,54.0,46.0,,1.0
+LA-5,0.004,0.996,LA,5,Michael Vallien Jr.,,R,R,-19,,,,0,-17,LA-05@@178,,,40.5,59.5,,
+LA-4,0.002,0.998,LA,4,,Mike Johnson,R,R,-26,,,,0,-14,LA-04@@177,,,37.0,63.0,,10.119472430405565
+LA-3,0.006,0.994,LA,3,,,R,R,-22,,,,0,-21,LA-03@@176,,,39.0,61.0,,10.119472430405565
+LA-2,0.978,0.022,LA,2,Troy Carter,,D,D,16,,,,0,25,LA-02@@175,,,58.0,42.0,,1.0
+LA-1,0.005,0.995,LA,1,,Scalise,R,R,-22,,,,0,-23,LA-01@@174,,,39.0,61.0,,10.119472430405565
+KY-6,0.098,0.902,KY,6,Randy Cravens,Andy Barr,R,R,-9,,,,0,-9,KY-06@@173,,,45.5,54.5,,
+KY-5,0.0,1.0,KY,5,NONE,Hal Rogers,R,R,-32,,,,0,-32,KY-05@@172,,R,34.0,66.0,,
+KY-4,0.0,1.0,KY,4,NONE,Thomas Massie,R,R,-19,,,,0,-19,KY-04@@171,,R,40.5,59.5,,
+KY-3,0.864,0.136,KY,3,Morgan McGarvey,Mike Craven,D,D,9,,,,0,9,KY-03@@170,,,54.5,45.5,,-38.99999999999999
+KY-2,0.003,0.997,KY,2,Hank Linderman,Brett Guthrie,R,R,-21,,,,0,-21,KY-02@@169,,,39.5,60.5,,
+KY-1,0.001,0.999,KY,1,Erin Marshall,James Comer,R,R,-24,,,,0,-24,KY-01@@168,,,38.0,62.0,,
+KS-4,0.032,0.968,KS,4,Esau Freeman,Ron Estees,R,R,-14,,,,0,-14,KS-04@@167,,,43.0,57.0,,
+KS-3,0.59,0.41,KS,3,Sharice Davids,Republican,D,D,-1,,,,0,-1,KS-03@@166,,,49.5,50.5,,3.0
+KS-2,0.199,0.801,KS,2,Democrat,Republican,N,R,-11,,,,0,-11,KS-02@@165,,,44.5,55.5,,
+KS-1,0.007,0.993,KS,1,Paul Buskirk,Tracey Mann,R,R,-18,,,,0,-18,KS-01@@164,,,41.0,59.0,,
+IA-4,0.014,0.986,IA,4,Ryan Melton,Randy Feenstra ,R,R,-16,,,,0,-16,IA-04@@163,,,42.0,58.0,,
+IA-3,0.411,0.589,IA,3,Lanon Baccam,Zach Nunn,R,R,-3,,,,0,-3,IA-03@@162,,,48.5,51.5,,
+IA-2,0.23,0.77,IA,2,Sarah Corkery,Ashley Hinson,R,R,-4,,,,0,-4,IA-02@@161,,,48.0,52.0,,
+IA-1,0.269,0.731,IA,1,Christina Bohannan,Mariannette Miller-Meeks ,R,R,-3,,,,0,-3,IA-01@@160,,,48.5,51.5,,
+IN-9,0.022,0.978,IN,9,Tim Peck,Erin Houchin,R,R,-16,,,,0,-16,IN-09@@159,,,42.0,58.0,,-2.2409243581747886
+IN-8,0.019,0.981,IN,8,Erik Hurt,Mark Messmer ,N,R,-19,,,,0,-19,IN-08@@158,,,40.5,59.5,,
+IN-7,0.994,0.006,IN,7,André Carson,John Schmitz,D,D,19,,,,0,19,IN-07@@157,,,59.5,40.5,,
+IN-6,0.031,0.969,IN,6,Cinde Wirth,Jefferson Shreve,N,R,-19,,,,0,-19,IN-06@@156,,,40.5,59.5,,
+IN-5,0.066,0.934,IN,5,Deborah Pickett,Victoria Spartz,R,R,-11,,,,0,-11,IN-05@@155,,,44.5,55.5,,1.8799492734103347
+IN-4,0.013,0.987,IN,4,Derrick Holder,Jim Baird,R,R,-18,,,,0,-18,IN-04@@154,,,41.0,59.0,,1.8332653383797104
+IN-3,0.038,0.962,IN,3,Kiley Adolph,Marlin Stutzman,N,R,-18,,,,0,-18,IN-03@@153,,,41.0,59.0,,
+IN-2,0.036,0.964,IN,2,Lori Camp,Rudy Yakym ,R,R,-14,,,,0,-14,IN-02@@152,,,43.0,57.0,,
+IN-1,0.729,0.271,IN,1,Frank Mrvan,Randy Niemeye,D,D,3,,,,0,3,IN-01@@151,,,51.5,48.5,,0.23482055569339974
+IL-17,0.659,0.341,IL,17,Eric Sorensen,Joe McGraw,D,D,2,,,,0,2,IL-17@@150,,,51.0,49.0,,-20.0
+IL-16,0.0,1.0,IL,16,NONE,Darin LaHood,R,R,-13,,,,0,-13,IL-16@@149,,R,43.5,56.5,,
+IL-15,0.0,1.0,IL,15,NONE,Mary Milller,R,R,-22,,,,0,-22,IL-15@@148,,R,39.0,61.0,,-7.0
+IL-14,0.809,0.191,IL,14,Lauren Underwood ,Jim Marter,D,D,4,,,,0,4,IL-14@@147,,,52.0,48.0,,-3.171536707503354
+IL-13,0.739,0.261,IL,13,Nikki Budzinski,Joshua Lloyd,D,D,3,,,,0,3,IL-13@@146,,,51.5,48.5,,1.2199724896315807
+IL-12,0.0,1.0,IL,12,Mike Bost,Brian Roberts,R,R,-24,,,,0,-24,IL-12@@145,,,38.0,62.0,,
+IL-11,0.805,0.195,IL,11,Bill Foster,Jerry Evans,D,D,5,,,,0,5,IL-11@@144,,,52.5,47.5,,
+IL-10,0.94,0.06,IL,10,Brad Schneider,Jim Carris,D,D,11,,,,0,11,IL-10@@143,,,55.5,44.5,,
+IL-9,0.995,0.005,IL,9,Jan Schakowsky,Seth Cohen,D,D,19,,,,0,19,IL-09@@142,,,59.5,40.5,,3.532873460802158
+IL-8,0.847,0.153,IL,8,Raja Krishnamoorthi ,Mark Rice,D,D,6,,,,0,6,IL-08@@141,,,53.0,47.0,,
+IL-7,1.0,0.0,IL,7,Danny Davis,Chad Koppie,D,D,36,,,,0,36,IL-07@@140,,,68.0,32.0,,7.228101021737552
+IL-6,0.769,0.231,IL,6,Sean Casten,Niki Conforti,D,D,3,,,,0,3,IL-06@@139,,,51.5,48.5,,
+IL-5,0.991,0.009,IL,5,Mike Quigley,Tommy Hanson,D,D,18,,,,0,18,IL-05@@138,,,59.0,41.0,,
+IL-4,0.999,0.001,IL,4,Chuy Garcia,Lupe Castillo,D,D,22,,,,0,22,IL-04@@137,,,61.0,39.0,,-6.432493387909753
+IL-3,0.993,0.007,IL,3,Delia Ramirez,John Booras,D,D,20,,,,0,20,IL-03@@136,,,60.0,40.0,,-6.432493387909753
+IL-2,0.991,0.009,IL,2,Robin Kelly,Ashley Ramos ,D,D,19,,,,0,19,IL-02@@135,,,59.5,40.5,,
+IL-1,0.993,0.007,IL,1,Jonathan Jackson,Marcus Lewis,D,D,20,,,,0,20,IL-01@@134,,,60.0,40.0,,-7.0
+ID-2,0.035,0.965,ID,2,David Roth,Mike Simpson,R,R,-14,,,,0,-14,ID-02@@133,,,43.0,57.0,,
+ID-1,0.002,0.998,ID,1,Kaylee Peterson,Russ Fulcher,R,R,-22,,,,0,-22,ID-01@@132,,,39.0,61.0,,
+HI-2,0.963,0.037,HI,2,Jill Tokuda,Steve Bond,D,D,14,,,,0,14,HI-02@@131,,,57.0,43.0,,-17.0
+HI-1,0.976,0.024,HI,1,Ed Case,Patrick Largey,D,D,14,,,,0,14,HI-01@@130,,,57.0,43.0,,
+GA-14,0.002,0.998,GA,14,Marjorie Taylor Greene,Shawn Harris,R,R,-22,,,,0,-22,GA-14@@129,,,39.0,61.0,,-26.0
+GA-13,0.987,0.013,GA,13,David Scott,Jonathan Chavez,D,D,17,,,,0,28,GA-13@@128,,,58.5,41.5,,
+GA-12,0.124,0.876,GA,12,Liz Johnson,Rick Allen,R,R,-8,,,,0,-8,GA-12@@127,,,46.0,54.0,,
+GA-11,0.021,0.979,GA,11,Kate Stamper,Barry Loudermilk ,R,R,-14,,,,0,-11,GA-11@@126,,,43.0,57.0,,
+GA-10,0.035,0.965,GA,10,Lexy Doherty,Mike Collins,R,R,-14,,,,0,-15,GA-10@@125,,,43.0,57.0,,-9.945341981715135
+GA-9,0.006,0.994,GA,9,Tambrei Cash,Andre Clyde,R,R,-20,,,,0,-22,GA-09@@124,,,40.0,60.0,,
+GA-8,0.015,0.985,GA,8,Darrius Butler,Austin Scott,R,R,-16,,,,0,-16,GA-08@@123,,,42.0,58.0,,
+GA-7,0.043,0.957,GA,7,Bob Christian,Rich McCormick ,R,R,-13,,,,0,10,GA-07@@122,,,43.5,56.5,,-7.0
+GA-6,0.998,0.002,GA,6,Lucy McBath,Jeff Criswell,D,D,22,,,,0,-11,GA-06@@121,,,61.0,39.0,,
+GA-5,1.0,0.0,GA,5,Nikema Williams,John Salvesen,D,D,35,,,,0,32,GA-05@@120,,,67.5,32.5,,1.999999999999999
+GA-4,1.0,0.0,GA,4,Hank Johnson,Eugene Yu,D,D,27,,,,0,27,GA-04@@119,,,63.5,36.5,,
+GA-3,0.031,0.969,GA,3,Maura Keller,Brian Jack,N,R,-18,,,,0,-18,GA-03@@118,,,41.0,59.0,,
+GA-2,0.742,0.258,GA,2,Sanford Bishop,Wayne Johnson,D,D,3,,,,0,3,GA-02@@117,,,51.5,48.5,,1.0
+GA-1,0.097,0.903,GA,1,Patti Hewitt,Buddy Carter,R,R,-9,,,,0,-9,GA-01@@116,,,45.5,54.5,,
+FL-28,0.307,0.693,FL,28,Phil Ehr,Carlos Gimenez,R,R,-2,,,,0,-2,FL-28@@115,,,49.0,51.0,,
+FL-27,0.4,0.6,FL,27,Lucia Baez-Geller,Maria Elvira Salazar,R,R,0,,,,0,EVEN,FL-27@@114,,,50.0,50.0,,7.228101021737553
+FL-26,0.118,0.882,FL,26,Joey Atkins,Mario Diaz-Balart,R,R,-8,,,,0,-8,FL-26@@113,,,46.0,54.0,,
+FL-25,0.922,0.078,FL,25,Debbie Wasserman Schultz,Chris Eddy,D,D,9,,,,0,9,FL-25@@112,,,54.5,45.5,,2.0
+FL-24,0.998,0.002,FL,24,Fredrica Wilson,Jesus Navarro,D,D,25,,,,0,25,FL-24@@111,,,62.5,37.5,,
+FL-23,0.824,0.176,FL,23,Jared Moskowitz,Joe Kaufman,D,D,5,,,,0,5,FL-23@@110,,,52.5,47.5,,2.0
+FL-22,0.862,0.138,FL,22,Lois Frankel,Dan Franzese,D,D,7,,,,0,7,FL-22@@109,,,53.5,46.5,,2.0
+FL-21,0.168,0.832,FL,21,Thomas Witkop,Brian Mast,R,R,-7,,,,0,-7,FL-21@@108,,,46.5,53.5,,4.820200119126522
+FL-20,1.0,0.0,FL,20,Sheila Cherfilus-McCormick ,NONE,D,D,25,,,,0,25,FL-20@@107,,D,62.5,37.5,,
+FL-19,0.045,0.955,FL,19,Kari Lerner,Byron Donalds,R,R,-13,,,,0,-13,FL-19@@106,,,43.5,56.5,,6.916521486202796
+FL-18,0.039,0.961,FL,18,Andrea Doria Kale,Scott Franklin,R,R,-13,,,,0,-13,FL-18@@105,,,43.5,56.5,,2.0
+FL-17,0.092,0.908,FL,17,Manny Lopez,Greb Steube,R,R,-10,,,,0,-10,FL-17@@104,,,45.0,55.0,,6.916521486202796
+FL-16,0.157,0.843,FL,16,Jan Schneider,Vern Buchanan,R,R,-7,,,,0,-7,FL-16@@103,,,46.5,53.5,,4.348770482146902
+FL-15,0.355,0.645,FL,15,Pat Kemp,Laurel Lee,R,R,-4,,,,0,-4,FL-15@@102,,,48.0,52.0,,6.916521486202797
+FL-14,0.885,0.115,FL,14,Kathy Castor,Rocky Rochford,D,D,8,,,,0,8,FL-14@@101,,,54.0,46.0,,2.0
+FL-13,0.424,0.576,FL,13,Whitney Fox,Anna Paulina Luna,R,R,-6,,,,0,-6,FL-13@@100,,,47.0,53.0,,
+FL-12,0.021,0.979,FL,12,Rock Aboujaoude Jr,Gus Bilirakis,R,R,-17,,,,0,-17,FL-12@@99,,,41.5,58.5,,6.916521486202797
+FL-11,0.141,0.859,FL,11,Barbie Hall,Daniel Webster,R,R,-8,,,,0,-8,FL-11@@98,,,46.0,54.0,,4.38175679501127
+FL-10,0.961,0.039,FL,10,Maxwell Frost,Willie Montague,D,D,14,,,,0,14,FL-10@@97,,,57.0,43.0,,2.0
+FL-9,0.876,0.124,FL,9,Darren Soto,Thomas Chalifoux,D,D,8,,,,0,8,FL-09@@96,,,54.0,46.0,,2.0
+FL-8,0.19,0.81,FL,8,Sandy Kennedy,Bill Posey,N,R,-11,,,,0,-11,FL-08@@95,,,44.5,55.5,,6.9165214862027975
+FL-7,0.22,0.78,FL,7,Jennifer Adams,Cory Mills,R,R,-5,,,,0,-5,FL-07@@94,,,47.5,52.5,,4.984684954813097
+FL-6,0.025,0.975,FL,6,James Stockton III,Michael Waltz,R,R,-14,,,,0,-14,FL-06@@93,,,43.0,57.0,,
+FL-5,0.076,0.924,FL,5,Jay McGovern,John Rutherford,R,R,-11,,,,0,-11,FL-05@@92,,,44.5,55.5,,6.916521486202797
+FL-4,0.2,0.8,FL,4,LaShonda Holloway,Aaron Bean,R,R,-6,,,,0,-6,FL-04@@91,,,47.0,53.0,,6.999999999999999
+FL-3,0.083,0.917,FL,3,Tom Wells,Kat Cammack,R,R,-9,,,,0,-9,FL-03@@90,,,45.5,54.5,,-26.0
+FL-2,0.128,0.872,FL,2,Yen Bailey,Neal Dunn,R,R,-8,,,,0,-8,FL-02@@89,,,46.0,54.0,,5.0
+FL-1,0.005,0.995,FL,1,Gay Valimont,Matt Gaetz,R,R,-19,,,,0,-19,FL-01@@88,,,40.5,59.5,,
+DE-1,0.836,0.164,DE,1,Democrat,Republican,D,D,7,,,,0,7,DE@@87,,,53.5,46.5,,-20.088479485342727
+CT-5,0.759,0.241,CT,5,Jahana Hayes,George Logan,D,D,3,,,,0,3,CT-05@@86,,,51.5,48.5,,
+CT-4,0.962,0.038,CT,4,Jim Himes,Michael Goldstein,D,D,13,,,,0,13,CT-04@@85,,,56.5,43.5,,1.088262098549803
+CT-3,0.879,0.121,CT,3,Rosa DeLauro,Michael Massey,D,D,7,,,,0,7,CT-03@@84,,,53.5,46.5,,
+CT-2,0.737,0.263,CT,2,Joe Courtney ,Mike France,D,D,3,,,,0,3,CT-02@@83,,,51.5,48.5,,
+CT-1,0.96,0.04,CT,1,John Larson,Jim Griffin,D,D,12,,,,0,12,CT-01@@82,,,56.0,44.0,,
+CO-8,0.635,0.365,CO,8,Yadira Caraveo,Gabe Evans,D,D,0,,,,0,EVEN,CO-08@@81,,,50.0,50.0,,
+CO-7,0.791,0.209,CO,7,Brittany Pettersen ,Sergei Matveyuk,D,D,4,,,,0,4,CO-07@@80,,,52.0,48.0,,6.333333333333333
+CO-6,0.898,0.102,CO,6,Jason Crow,John Fabbricatore,D,D,9,,,,0,9,CO-06@@79,,,54.5,45.5,,
+CO-5,0.244,0.756,CO,5,River Gassen,Jeff Crank,N,R,-9,,,,0,-9,CO-05@@78,,,45.5,54.5,,
+CO-4,0.093,0.907,CO,4,Trisha Calvarese,Lauren Boebert,N,R,-13,,,,0,-13,CO-04@@77,,,43.5,56.5,,-22.1
+CO-3,0.318,0.682,CO,3,Adam Frisch,Jeff Hurd,N,R,-7,,,,0,-7,CO-03@@76,,,46.5,53.5,,
+CO-2,0.987,0.013,CO,2,Joe Neguse,Marshall Dawson,D,D,17,,,,0,17,CO-02@@75,,,58.5,41.5,,
+CO-1,1.0,0.0,CO,1,Diana DeGette,Valdamar Archuleta,D,D,29,,,,0,29,CO-01@@74,,,64.5,35.5,,7.919597832798822
+CA-52,0.999,0.001,CA,52,Juan Vargas,Justin Lee,D,D,18,,,,0,18,CA-52@@73,,,59.0,41.0,,
+CA-51,0.955,0.045,CA,51,Sara Jacobs,Bill Wells,D,D,12,,,,0,12,CA-51@@72,,,56.0,44.0,,
+CA-50,0.974,0.026,CA,50,Scott Peters,Peter Bono,D,D,14,,,,0,14,CA-50@@71,,,57.0,43.0,,
+CA-49,0.733,0.267,CA,49,Mike Levin,Matt Gunderson,D,D,3,,,,0,3,CA-49@@70,,,51.5,48.5,,-17.0
+CA-48,0.017,0.983,CA,48,Stephen Houlahan,Darell Issa,R,R,-9,,,,0,-9,CA-48@@69,,,45.5,54.5,,
+CA-47,0.79,0.21,CA,47,Dave Min,Scott Baugh,D,D,3,,,,0,3,CA-47@@68,,,51.5,48.5,,21.5
+CA-46,0.984,0.016,CA,46,Lou Correa,David Pan,D,D,15,,,,0,15,CA-46@@67,,,57.5,42.5,,27.0
+CA-45,0.465,0.535,CA,45,Derek Tran,Michelle Steel ,R,R,2,,,,0,2,CA-45@@66,,,51.0,49.0,,
+CA-44,0.999,0.001,CA,44,Nanette Barragán,Roger Groh,D,D,24,,,,0,24,CA-44@@65,,,62.0,38.0,,27.0
+CA-43,1.0,0.0,CA,43,Maxine Waters,Steve Williams,D,D,32,,,,0,32,CA-43@@64,,,66.0,34.0,,27.0
+CA-42,0.998,0.002,CA,42,Robert Garcia,John Briscoe,D,D,22,,,,0,22,CA-42@@63,,,61.0,39.0,,26.999999999999996
+CA-41,0.251,0.749,CA,41,Will Rollins,Ken Calvert,R,R,-3,,,,0,-3,CA-41@@62,,,48.5,51.5,,-17.0
+CA-40,0.29,0.71,CA,40,Joe Kerr,Young Kim,R,R,-2,,,,0,-2,CA-40@@61,,,49.0,51.0,,
+CA-39,0.96,0.04,CA,39,Mark Takano,David Serpa,D,D,12,,,,0,12,CA-39@@60,,,56.0,44.0,,27.0
+CA-38,0.981,0.019,CA,38,Linda Sánchez ,Eric Ching,D,D,14,,,,0,14,CA-38@@59,,,57.0,43.0,,27.0
+CA-37,1.0,0.0,CA,37,Sydney Kamlager-Dove,NONE,D,D,37,Juan Rey,,,0,37,CA-37@@58,,D,68.5,31.5,,27.0
+CA-36,0.994,0.006,CA,36,Ted Lieu,Melissa Toomim,D,D,21,,,,0,21,CA-36@@57,,,60.5,39.5,,6.0
+CA-35,0.97,0.03,CA,35,Norma Torres,Mike Cargile ,D,D,13,,,,0,13,CA-35@@56,,,56.5,43.5,,27.0
+CA-34,1.0,0.0,CA,34,Jimmy Gomez,NONE,D,D,32,David Kim,,,0,32,CA-34@@55,D,D,66.0,34.0,,27.0
+CA-33,0.962,0.038,CA,33,Pete Aguilar,Tom Herman,D,D,12,,,,0,12,CA-33@@54,,,56.0,44.0,,27.0
+CA-32,0.993,0.007,CA,32,Brad Sherman ,Larry Thompson,D,D,20,,,,0,20,CA-32@@53,,,60.0,40.0,,
+CA-31,0.98,0.02,CA,31,Gil Cisneros,Daniel Martinez,N,D,15,,,,0,15,CA-31@@52,,,57.5,42.5,,27.0
+CA-30,0.996,0.004,CA,30,Laura Friedman,Alex Balekian,N,D,23,,,,0,23,CA-30@@51,,,61.5,38.5,,
+CA-29,1.0,0.0,CA,29,Luz Rivas,Benito Bernal,N,D,26,,,,0,26,CA-29@@50,,,63.0,37.0,,27.0
+CA-28,0.992,0.008,CA,28,Judy Chu,April Verlato,D,D,16,,,,0,16,CA-28@@49,,,58.0,42.0,,44.89999999999999
+CA-27,0.557,0.443,CA,27,George Whitesides,Mike Garcia,R,R,4,,,,0,4,CA-27@@48,,,52.0,48.0,,-17.0
+CA-26,0.861,0.139,CA,26,Julia Brownley,Michael Koslow,D,D,8,,,,0,8,CA-26@@47,,,54.0,46.0,,-17.0
+CA-25,0.837,0.163,CA,25,Rudy Ruiz,Ian Weeks,D,D,6,,,,0,6,CA-25@@46,,,53.0,47.0,,-1.0000000000000009
+CA-24,0.952,0.048,CA,24,Salud Carbajal,Thomas Cole,D,D,13,,,,0,13,CA-24@@45,,,56.5,43.5,,-17.0
+CA-23,0.108,0.892,CA,23,Derek Marshall,Jay Obernolte,R,R,-8,,,,0,-8,CA-23@@44,,,46.0,54.0,,
+CA-22,0.376,0.624,CA,22,Rudy Salas,David Valdeo,R,R,5,,,,0,5,CA-22@@43,,,52.5,47.5,,
+CA-21,0.919,0.081,CA,21,Jim Costa,Michael Maher,D,D,9,,,,0,9,CA-21@@42,,,54.5,45.5,,12.18043177326978
+CA-20,0.0,1.0,CA,20,NONE,Vince Fong,R,R,-16,,,,0,-16,CA-20@@41,,R,42.0,58.0,,-17.0
+CA-19,0.992,0.008,CA,19,Jimmy Pannetta,Jason Anderson,D,D,18,,,,0,18,CA-19@@40,,,59.0,41.0,,21.500000000000004
+CA-18,0.993,0.007,CA,18,Zoe Lofgren,Peter Hernandez,D,D,21,,,,0,21,CA-18@@39,,,60.5,39.5,,27.0
+CA-17,0.999,0.001,CA,17,Ro Khanna,Anita Chen ,D,D,23,,,,0,23,CA-17@@38,,,61.5,38.5,,
+CA-16,0.0,1.0,CA,16,Sam Liccardo,,N,D,26,Evan Low,,,0,26,CA-16@@37,D,,63.0,37.0,,
+CA-15,0.999,0.001,CA,15,Kevin Mullin,Anna Cheng Kramer,D,D,28,,,,0,28,CA-15@@36,,,64.0,36.0,,
+CA-14,0.998,0.002,CA,14,Eric Swawell,Vin Kruttiventi,D,D,22,,,,0,22,CA-14@@35,,,61.0,39.0,,44.89999999999999
+CA-13,0.597,0.403,CA,13,Adam Gray,John Duarte,R,R,4,,,,0,4,CA-13@@34,,,52.0,48.0,,8.57696350990162
+CA-12,1.0,0.0,CA,12,Lateefah Simon,,D,D,40,Jennifer Tran,,,0,40,CA-12@@33,D,,70.0,30.0,,44.89999999999999
+CA-11,1.0,0.0,CA,11,Nancy Pelosi,Bruce Lou,D,D,37,,,,0,37,CA-11@@32,,,68.5,31.5,,70.19999999999999
+CA-10,0.99,0.01,CA,10,Mark DeSaulnier,Katherine Piccinini,D,D,18,,,,0,18,CA-10@@31,,,59.0,41.0,,21.5
+CA-9,0.815,0.185,CA,9,Josh Harder,Kevin Lincoln,D,D,5,,,,0,5,CA-09@@30,,,52.5,47.5,,
+CA-8,0.999,0.001,CA,8,John Garamendi ,Rudy Recile,D,D,26,,,,0,26,CA-08@@29,,,63.0,37.0,,35.81884802011046
+CA-7,0.991,0.009,CA,7,Doris Matsui,Tom Silva,D,D,17,,,,0,17,CA-07@@28,,,58.5,41.5,,44.89999999999999
+CA-6,0.87,0.13,CA,6,Ami Bera,Christine Bish,D,D,7,,,,0,7,CA-06@@27,,,53.5,46.5,,
+CA-5,0.101,0.899,CA,5,Michael Barkley,Tom McClintock,R,R,-9,,,,0,-9,CA-05@@26,,,45.5,54.5,,-17.0
+CA-4,0.991,0.009,CA,4,Mike Thompson,John Munn,D,D,17,,,,0,17,CA-04@@25,,,58.5,41.5,,2.0
+CA-3,0.24,0.76,CA,3,Jessica Morse ,Kevin Kiley,R,R,-4,,,,0,-4,CA-03@@24,,,48.0,52.0,,-8.011223559823412
+CA-2,0.998,0.002,CA,2,Jared Huffman,Chris Coulombe,D,D,23,,,,0,23,CA-02@@23,,,61.5,38.5,,5.506490507853259
+CA-1,0.046,0.954,CA,1,Rose Penelope Yee,Doug LaMalfa,R,R,-12,,,,0,-12,CA-01@@22,,,44.0,56.0,,-39.2948389956945
+AR-4,0.003,0.997,AR,4,Risie Howard,Bruce Westerman,R,R,-20,,,,0,-20,AR-04@@21,,,40.0,60.0,,
+AR-3,0.015,0.985,AR,3,Caitlin Draper ,Steve Womack,R,R,-15,,,,0,-15,AR-03@@20,,,42.5,57.5,,
+AR-2,0.097,0.903,AR,2,French Hill,Marcus Jones ,R,R,-9,,,,0,-9,AR-02@@19,,,45.5,54.5,,
+AR-1,0.002,0.998,AR,1,Rick Crawford,Rodney Govens,R,R,-22,,,,0,-22,AR-01@@18,,,39.0,61.0,,
+AZ-9,0.016,0.984,AZ,9,Quacy Smith,Paul Gosar,R,R,-16,,,,0,-16,AZ-09@@17,,,42.0,58.0,,
+AZ-8,0.192,0.808,AZ,8,Greg Whitten,Abraham Hamadeh,N,R,-10,,,,0,-10,AZ-08@@16,,,45.0,55.0,,
+AZ-7,0.981,0.019,AZ,7,Raúl Grijalva ,Daniel Butierez,D,D,15,,,,0,15,AZ-07@@15,,,57.5,42.5,,27.0
+AZ-6,0.433,0.567,AZ,6,Kirsten Engel,Juan Ciscomani,R,R,-3,,"3,838,627","3,015,301","6,853,928",-3,AZ-06@@14,,,48.5,51.5,,-21.0
+AZ-5,0.052,0.948,AZ,5,Katrina Schaffner,Andy Biggs,R,R,-11,,"$7,649","545,276","$552,925",-11,AZ-05@@13,,,44.5,55.5,,
+AZ-4,0.701,0.299,AZ,4,Greg Stanton,Kelly Cooper,D,R,2,,"1,329,125","333,009","1,662,134",2,AZ-04@@12,,,51.0,49.0,,
+AZ-3,0.998,0.002,AZ,3,Yassamin Ansari,Jeff Zink,N,D,24,,,,0,24,AZ-03@@11,,,62.0,38.0,,
+AZ-2,0.166,0.834,AZ,2,Jonathan Nez,Eli Crane,R,R,-6,,"$630,466","$2,402,179","$3,032,645",-6,AZ-02@@10,,,47.0,53.0,,-10.16304580224815
+AZ-1,0.435,0.565,AZ,1,Amish Shah,David Schweikert,R,R,-2,,"$1,055,885","$1,763,514","$2,819,399",-2,AZ-01@@9,,,49.0,51.0,,
+AK-1,0.597,0.403,AK,1,Mary Peltola,Republican,D,D,-8,,"$3,461,655","$907,158","$4,368,813",-8,AK-AL@@8,,,46.0,54.0,,
+AL-7,0.965,0.035,AL,7,Terri Swell,Robin Litaker,D,D,12,,,,0,14,AL-07@@7,,,56.0,44.0,,
+AL-6,0.004,0.996,AL,6,Elizabeth Anderson,Gary Palmer,R,R,-22,,,,0,-18,AL-06@@6,,,39.0,61.0,,4.999999999999999
+AL-5,0.0,1.0,AL,5,NONE,Dale Strong,R,R,-17,,,,0,-17,AL-05@@5,,R,41.5,58.5,,10.119472430405565
+AL-4,0.0,1.0,AL,4,NONE,Robert Alderholt,R,R,-33,,,,0,-33,AL-04@@4,,R,33.5,66.5,,10.119472430405565
+AL-3,0.0,1.0,AL,3,NONE,Mike Rogers,R,R,-23,,,,0,-19,AL-03@@3,,R,38.5,61.5,,1.0
+AL-2,0.844,0.156,AL,2,Shomari Figures,Caroleene Dobson,N,R,4,,"$561,962","586,510","$1,148,472",-17,AL-02@@2,,,52.0,48.0,,
+AL-1,0.0,1.0,AL,1,Tom Holmes,Barry Moore,R,R,-28,,,,0,-16,AL-01@@1,,,36.0,64.0,"730,935",1.036018526813757
