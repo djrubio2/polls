@@ -68,9 +68,9 @@
 
         .tick {
             position: absolute;
-            border-left: 2px solid black;
-            height: 60px;
-            top: -52px;
+            border: 1px solid black;
+            height: 23px;
+            top: 55px;
         }
         #majority-label{
             position: absolute;
@@ -264,7 +264,7 @@
         <div id="topline">
             <div id="top-container">
                 <h1 style="text-align:left">2024 Presidential Forecast</h1>
-                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-9-24</span>
+                <span style="font-family: Inconsolata;text-transform: uppercase" id="update">Last Updated 9-9-24</span>
                 <hr>
 
                 <h3 style="text-align: left">Chance of winning the presidency:</h3>
@@ -357,7 +357,9 @@
         const dVote = d3.sum(data, d => d.dem_vote);
         const rVote = d3.sum(data, d => d.gop_vote);
         const oVote = d3.sum(data, d => d.oth_vote);
-
+        const date =  data[0].date;
+        d3.select("#update")
+        .html("Last updated " + date );
 
         d3.select("#d_vote")
             .html( dVote + "%");
@@ -580,8 +582,8 @@
                     }
                     return "0%";
                 })
-                .style("top", "15px")
-                .style("height", "60px")
+                .style("top", "23px")
+                .style("height", "50px")
                 .text("");
 
             d3.select("#majority-label")

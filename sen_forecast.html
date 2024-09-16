@@ -60,11 +60,12 @@
 
         }
 
+      
         .tick {
             position: absolute;
-            border-left: 2px solid black;
-            height: 60px;
-            top: -52px;
+            border: 1px solid black;
+            height: 23px;
+            top: 55px;
         }
         #majority-label{
             position: absolute;
@@ -284,7 +285,7 @@
         <div id="topline">
             <div id="top-container">
                 <h1 style="text-align:left">2024 Senate Forecast</h1>
-                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-9-24</span>
+                <span style="font-family: Inconsolata;text-transform: uppercase" id="update">Last Updated 9-9-24</span>
                 <hr>
 
                 <h3 style="text-align: left">Chance of winning a senate majority:</h3>
@@ -360,7 +361,6 @@
         </table>
     </div>
     <hr>
-    <object data="test.svg"></object>
 
 <h2>Tossups</h2>
 <div id="close-margins-table"></div>
@@ -370,6 +370,39 @@
 </body>
 
 <script>
+
+
+d3.csv("senate_output.csv").then(function (data) {
+        const avgEV = d3.sum(data, d => d.dem_prob / 10000);
+        const avgEVR = d3.sum(data, d => d.gop_prob / 10000);
+
+        const demProb = d3.sum(data, d => {
+        });
+        const repProb = d3.sum(data, d => {
+        });
+        const tieProb = d3.sum(data, d => {
+        });
+
+        console.log(demProb / 10000, repProb / 10000, tieProb / 10000)
+        console.log(avgEV, avgEVR)
+
+
+        d3.select("#rSeatAvg")
+            .html(100-d3.median(data, d => d.gop_prob));
+        d3.select("#dSeatAvg")
+            .html(d3.median(data, d => d.dem_prob));
+        d3.select("#toplineD")
+            .html(demProb / 100);
+        d3.select("#toplineR")
+            .html(repProb / 100);
+        d3.select("#demProb")
+            .style("width", demProb / 100 + "%");
+        d3.select("#repProb")
+            .style("width", repProb / 100 + "%");
+        d3.select("#tieProb")
+            .style("width", tieProb / 100 + "%");
+    });
+
     // Load the CSV data
     const colorScale = d3.scaleThreshold()
         .range(['#ff352c', '#ff6a54', '#ff927c', '#ffb8a6', '#ffdcd2', '#dceaf8', '#b9d4f1', '#93c0e9', '#68ace2', '#2798da'])
@@ -377,6 +410,9 @@
     const colorScaleInd = d3.scaleThreshold()
         .range(['#ff352c', '#ff6a54', '#ff927c', '#ffb8a6', '#ffdcd2', '#e7f2d4', '#cde4a9', '#b3d77f', '#97ca53', '#78bc1a'])
         .domain([.1, .2, .3, .4, .5, .6, .7, .8, .9]);
+
+
+        
     d3.csv("topline.csv").then(function (data) {
         const dVote = d3.sum(data, d => d.dem_vote);
         const rVote = d3.sum(data, d => d.gop_vote);
@@ -396,6 +432,10 @@
     d3.csv("topline.csv").then(function (data) {
         const avgEV = d3.sum(data, d => d.dem_prob / 10000);
         const avgEVR = d3.sum(data, d => d.gop_prob / 10000);
+
+        const date =  data[0].date;
+        d3.select("#update")
+        .html("Last updated " + date );
 
         const demProb = d3.sum(data, d => {
            return d.dem_sen_prob;
@@ -418,14 +458,11 @@
         console.log(avgEV, avgEVR) 
 
 
-        d3.select("#rSeatAvg")
-            .html(d3.median(data, d => d.gop_prob));
-        d3.select("#dSeatAvg")
-            .html(d3.median(data, d => d.dem_prob));
+      
         d3.select("#toplineD")
-            .html((demProb+(tieProb*presD)) * 100);
+            .html(Math.round((demProb+(tieProb*presD)) * 100));
         d3.select("#toplineR")
-            .html((repProb+(tieProb*presR)) * 100);
+            .html(Math.round((repProb+(tieProb*presR)) * 100));
         d3.select("#demProb")
             .style("width", demProb *100+ "%");
         d3.select("#repProb")
@@ -625,8 +662,8 @@
                     }
                     return "0%";
                 })
-                .style("top", "15px")
-                .style("height", "60px")
+                .style("top", "18px")
+                .style("height", "50px")
                 .text("");
 
             d3.select("#majority-label")
@@ -729,7 +766,7 @@
                             }
                         });  // Revert stroke width
                 })
-                .attr("fill", "grey");
+                .attr("fill", "rgb(237, 237, 237)");
  // Color the states based on margin
  svg.selectAll("circle")
                 .data(data, function (d) { return d ? d.State : this.id; })

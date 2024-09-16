@@ -41,14 +41,16 @@
             border: 2px solid black;
             padding: 5px;
             height: 100px;
+            background-color: #ffffff;
+background-size: 10px 10px;
+background-image: repeating-linear-gradient(45deg, #f1f1f1 0, #f1f1f1 1px, #ffffff 0, #ffffff 50%);
 
         }
 
         .block {
             font-family: 'Inconsolata', sans-serif;
-
             display: inline-block;
-            height: 50px;
+            height: 20px;
             margin: 0px;
             vertical-align: top;
             text-align: center;
@@ -73,6 +75,8 @@
             border-left: 2px solid black;
             height: 60px;
             top: -52px;
+            user-select: none;
+
         }
 
         #majority-label {
@@ -90,11 +94,10 @@
         .tooltip {
             position: absolute;
             text-align: center;
-            width: 150px;
-            height: 125px;
+            width: 200px;
+            height: auto;
             padding: 5px;
-            background: #ffffff;
-            color: #fff;
+            background: #fffffff6;
             border: 3px solid black;
             color: black;
             border-radius: 0px;
@@ -235,6 +238,13 @@
             border-bottom: 2px solid rgb(34, 34, 34);
         }
 
+        #status{
+            font-size: 9pt;
+            border:3px solid;
+            padding:3px;
+            font-weight: bold;
+        }
+
         th.sort-asc::after {
             content: " ▼";
             font-size: 5pt;
@@ -267,7 +277,7 @@
         <div id="topline">
             <div id="top-container">
                 <h1 style="text-align:left">2024 House Forecast</h1>
-                <span style="font-family: Inconsolata;text-transform: uppercase">Last Updated 9-4-24</span>
+                <span style="font-family: Inconsolata;text-transform: uppercase" id="update">Last Updated 9-4-24</span>
                 <hr>
 
                 <h3 style="text-align: left">Chance of winning the House:</h3>
@@ -292,12 +302,12 @@
                     <div class="dem">
                         <span><span id="dSeatAvg" class="odometer">271</span></span>
                         <br>
-                        <span style="color:#292929;font-size: 10pt;text-align:left;">Median Electoral Votes</span>
+                        <span style="color:#292929;font-size: 10pt;text-align:left;">Median House Seats</span>
                     </div>
                     <div class="gop">
                         <span><span id="rSeatAvg" class="odometer">266</span></span>
                         <br>
-                        <span style="color:#292929;font-size: 10pt;text-align:left;">Median Electoral Votes</span>
+                        <span style="color:#292929;font-size: 10pt;text-align:left;">Median House Seats</span>
                     </div>
                     <br>
                 </div>
@@ -309,8 +319,10 @@
         <div id="map-container"></div>
 
     </div>
+    <h1>Forecasted House Seats</h1>
+
     <div id="chart">
-        <div id="majority-label">270</div>
+        <div id="majority-label">218</div>
         <br>
     </div>
     <div>
@@ -360,8 +372,9 @@
         const dVote = d3.sum(data, d => d.dem_vote);
         const rVote = d3.sum(data, d => d.gop_vote);
         const oVote = d3.sum(data, d => d.oth_vote);
-
-
+        const date =  data[0].date;
+        d3.select("#update")
+        .html("Last updated " + date );
         d3.select("#d_vote")
             .html(dVote + "%");
         d3.select("#r_vote")
@@ -372,39 +385,33 @@
     });
 
 
-    d3.csv("output.csv").then(function (data) {
-        const avgEV = d3.sum(data, d => d.dem_prob / 10000);
-        const avgEVR = d3.sum(data, d => d.gop_prob / 10000);
+    d3.csv("house_topline.csv").then(function (data) {
+        const avgEV = d3.sum(data, d => d.dem_prob);
+        const avgEVR = d3.sum(data, d => d.gop_prob);
 
-        const demProb = d3.sum(data, d => {
-            if (d.dem_prob >= 270)
-                return 1
+        const demProb = d3.sum(data, d => { d.dem_prob
         });
-        const repProb = d3.sum(data, d => {
-            if (d.gop_prob >= 270)
-                return 1
+        const repProb = d3.sum(data, d => { d
         });
         const tieProb = d3.sum(data, d => {
-            if (d.gop_prob == 269)
-                return 1
         });
 
         console.log(demProb / 10000, repProb / 10000, tieProb / 10000)
-        console.log(avgEV, avgEVR)
+        console.log("test",avgEV, avgEVR)
 
 
         d3.select("#rSeatAvg")
-            .html(d3.median(data, d => d.gop_prob));
+            .html(Math.round(d3.median(data, d => d.mean_seats_r)));
         d3.select("#dSeatAvg")
-            .html(d3.median(data, d => d.dem_prob));
+            .html(Math.round(d3.median(data, d => d.mean_seats_d)));
         d3.select("#toplineD")
-            .html(demProb / 100);
+            .html(avgEV *100);
         d3.select("#toplineR")
-            .html(repProb / 100);
+            .html(avgEVR * 100);
         d3.select("#demProb")
-            .style("width", demProb / 100 + "%");
+            .style("width", avgEV * 100 + "%");
         d3.select("#repProb")
-            .style("width", repProb / 100 + "%");
+            .style("width", avgEVR * 100 + "%");
         d3.select("#tieProb")
             .style("width", tieProb / 100 + "%");
     });
@@ -541,11 +548,28 @@
                     d.accumulatedVotes = accumulatedVotes;
                 })
                 .on("mouseover", function (event, d) {
+                    var status = ""
+                    console.log(d.holder)
+
+                    if (d.dem_prob > .5) {
+                        if (d.holder == "R") {
+                            status = "Dem flip"
+                        }
+
+                    }
+                    if (d.dem_prob < .5) {
+                        if (d.holder == "D") {
+                            status = "GOP flip"
+                        }
+
+                    }
+
+
                     const tooltip = tools.append("div")
                         .attr("class", "tooltip")
                         .style("left", event.pageX - 70 + "px")
                         .style("top", event.pageY - 500 + "px")
-                        .html(`<span><strong>${d.Code}</strong></span>
+                        .html(`<span><strong>${d.Code} - ${status}</strong></span>
                         <br>
                         <hr>
                         <div>
@@ -574,8 +598,8 @@
                     }
                     return "0%";
                 })
-                .style("top", "15px")
-                .style("height", "60px")
+                .style("top", "20px")
+                .style("height", "25px")
                 .text("");
 
             d3.select("#majority-label")
@@ -640,30 +664,60 @@
                     }
                 })
                 .on("mouseover", function (event, d) {
+
+                    var status = ""
+                    console.log(d.holder)
+
+                    if (d.dem_prob > .5) {
+                        if (d.holder == "R") {
+                            status = "<span id='status' style='color:#2798da'>Dem flip</span>"
+                        }
+                        if (d.holder == "D") {
+                            status = "<span id='status' style='background-color:#2798da;color:white;'>Dem hold</span>"
+                        }
+
+                    }
+                    if (d.dem_prob < .5) {
+                        if (d.holder == "D") {
+                            status = "<span id='status' style='color:#ff352c'>GOP flip</span>"
+                        }
+                        if (d.holder == "R") {
+                            status = "<span id='status' style='background-color:#ff352c;color:white;'>GOP hold</span>"
+                        }
+
+                    }
                     d3.select(this)
                         .attr("stroke-linejoin", "square")
                         .attr("stroke", "black")  // Outline in black
-                        .attr("stroke-width", 5);  // Increase stroke width
+                        .attr("stroke-width", 7);  // Increase stroke width
                     const tooltip = tools.append("div")
                         .attr("class", "tooltip")
                         .style("left", event.pageX + "px")
                         .style("top", event.pageY + "px")
-                        .html(`<span><strong>${d.Code}</strong></span>
-                        <br>
+                        .html(`<span><strong>${d.Code}</strong>  ${status}</span>
                         <hr>
                         <div>
-                            <span><strong>Chance of winning:</strong></span>
-                            <div id="d" ><span style="color:#292929;font-size: 8pt;text-align:left;"> ${d.DCand} :</span>
-<br>${Math.round(100 * d.dem_prob)}%</div><div id="r"><span style="color:#292929;font-size: 8pt;text-align:right;"> ${d.RCand} :</span>
-<br>${Math.round(100 * d.gop_prob)}%</div><br><br><br></div></div>
-                            <div id="bar2" style="background:linear-gradient(90deg, #2798da ${Math.round(100 * d.dem_prob)}%, #ff352c ${Math.round(100 * d.dem_prob)}%)"></div>
+                            <table style="font-size:9pt;padding:2px;">
+                                <tr>
+                                    <th>Candidate</th>
+                                    <th>Chance</th>
+                                    </tr>
+                                    <tr>
+                                        <td>${d.DCand} </td>
+                                        <td style="color:#2798da">${Math.round(100 * d.dem_prob)}%</td>
+                                        </tr>
+                                            <tr>
+                                        <td>${d.RCand}</td>
+                                        <td style="color:#ff352c">${Math.round(100 * d.gop_prob)}%</td>
+                                        </tr>
+                                </table>
                             </div>
                             `);
                 })
                 .on("mousemove", function (event, d) {
                     d3.select(this)
                     const tooltip = tools.select(".tooltip")
-                        .style("left", event.pageX - 75 + "px")
+                        .style("left", event.pageX - 150 + "px")
                         .style("top", event.pageY - 500 + "px")
                 })
                 .on("mouseout", function (event, d) {
@@ -680,7 +734,7 @@
                         })  // Remove outline
                         .attr("stroke-width", function () {
                             if (margin > .4 && margin < .6) {
-                                return 2
+                                return 3
                             }
                             else {
                                 return 1

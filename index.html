@@ -136,10 +136,23 @@ table {
 
 d3.csv("topline.csv").then(function(data) {
 
+    const date2 =  data[0].date;
+        d3.select("#update")
+        .html("Last updated " + date2 );
+
     var dVote = d3.sum(data, d => d.dem_avg);
     var rVote = d3.sum(data, d => d.gop_avg);
+    var parseTime = d3.timeParse("%m/%d/%Y");
+     var date = d3.sum(data, d => d.date);
+
+     
+
 
     var margin = dVote - rVote;
+
+    d3.select("#lead-candidate")
+    .html(date);
+
 d3.select("#lead-candidate")
     .attr("style",() =>{
     if (margin > 0){
