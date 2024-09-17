@@ -405,9 +405,9 @@ background-image: repeating-linear-gradient(45deg, #f1f1f1 0, #f1f1f1 1px, #ffff
         d3.select("#dSeatAvg")
             .html(Math.round(d3.median(data, d => d.mean_seats_d)));
         d3.select("#toplineD")
-            .html(avgEV *100);
+            .html(Math.round(avgEV *100));
         d3.select("#toplineR")
-            .html(avgEVR * 100);
+            .html(Math.round(avgEVR * 100));
         d3.select("#demProb")
             .style("width", avgEV * 100 + "%");
         d3.select("#repProb")
