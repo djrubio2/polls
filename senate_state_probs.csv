@@ -1,35 +1,35 @@
 State,dem_prob,gop_prob,FullName,StateName,region,PVI,DemName,RepName,OthName,Incumbent,Held by,dRiased,rRaised,%dRaised,Est. Margin,2018marg,Unnamed: 15,Unnamed: 16,elast,FullDName,FullRName,Adjusted,Blended Margin,Unc,Count
-WY,0.0047,0.9953,Wyoming,Wyoming,PLAINS,-25,Morrow,Barosso,,R,R,"$5,371.20","$6,299,066.74",0.0,-32,-36.86,-20.46,20.46,0.95,Scott Morrow,Jim Barosso,-25,-23.521608563492325,1.0,0
-WI,0.7447,0.2553,Wisconsin,Wisconsin,MW,-2,Baldwin,Hovde,,D,D,"$27,109,598.74","$16,726,282.24",0.62,8,10.83,4.23,4.23,1.06,Tammy Baldwin,Eric Hovde,-2,5.876627027698842,0.22360679774997896,20
-WV,0.0019,0.9981,West Virginia,West Virginia,AP,-22,Elliot,Justice,,N,D,"$252,261.96","$3,680,407.90",0.06,-28,3.31,16.71,16.71,1.1,Glenn Elliot,Jim Justice,-22,-32.18382991346893,0.7071067811865476,2
-WA,0.9518,0.0482,Washington,Washington,PACIFIC,8,Cantwell,Garcia,,D,D,"$9,871,334.87","$596,882.70",0.94,29,16.8,0.2,0.2,1.06,Maria Cantwell,Raul Garcia,8,15.540259790342857,0.7071067811865476,2
-VA,0.8904,0.1096,Virginia,Virginia,ATLANTIC,3,Kaine,Cao,,D,D,"$12,349,281.50","$3,051,361.35",0.8,20,16.0,4.4,4.4,0.92,Tim Kaine,Hung Cao,3,11.002114657439153,0.5773502691896257,3
-VT,0.9998,0.0002,Vermont,Vermont,NE,16,Sanders,Malloy,,D,D,"$6,124,635.58","216,082.35",0.97,30,39.97,15.37,15.37,1.23,Bernie Sanders,Gerald Malloy,16,38.652944216593106,0.7071067811865476,2
+WY,0.0058,0.9942,Wyoming,Wyoming,PLAINS,-25,Morrow,Barosso,,R,R,"$5,371.20","$6,299,066.74",0.0,-32,-36.86,-20.46,20.46,0.95,Scott Morrow,Jim Barosso,-25,-22.820167240550983,1.0,0
+WI,0.7446,0.2554,Wisconsin,Wisconsin,MW,-2,Baldwin,Hovde,,D,D,"$27,109,598.74","$16,726,282.24",0.62,8,10.83,4.23,4.23,1.06,Tammy Baldwin,Eric Hovde,-2,5.765549890546093,0.22360679774997896,20
+WV,0.0016,0.9984,West Virginia,West Virginia,AP,-22,Elliot,Justice,,N,D,"$252,261.96","$3,680,407.90",0.06,-28,3.31,16.71,16.71,1.1,Glenn Elliot,Jim Justice,-22,-32.273912609083716,0.7071067811865476,2
+WA,0.95,0.05,Washington,Washington,PACIFIC,8,Cantwell,Garcia,,D,D,"$9,871,334.87","$596,882.70",0.94,29,16.8,0.2,0.2,1.06,Maria Cantwell,Raul Garcia,8,15.53801169883712,0.7071067811865476,2
+VA,0.8949,0.1051,Virginia,Virginia,ATLANTIC,3,Kaine,Cao,,D,D,"$12,349,281.50","$3,051,361.35",0.8,20,16.0,4.4,4.4,0.92,Tim Kaine,Hung Cao,3,11.073971921367963,0.5773502691896257,3
+VT,1.0,0.0,Vermont,Vermont,NE,16,Sanders,Malloy,,D,D,"$6,124,635.58","216,082.35",0.97,30,39.97,15.37,15.37,1.23,Bernie Sanders,Gerald Malloy,16,38.649091129250515,0.7071067811865476,2
 UT,0.0,1.0,Utah,Utah,SW,-13,Gleich,Curtis,,N,R,"$756,449.28","$4,497,485.90",0.14,-23,,,,1.02,Caroline Gleich,John Curtis,-13,,1.0,1
-TX,0.3194,0.6806,Texas,Texas,SOUTH,-5,Allred,Cruz,,R,R,"$38,433,747.58","$26,095,586.59",0.6,6,-2.56,-6.16,6.16,1.02,Colin Allred,Ted Cruz,-5,-2.996188652741397,0.30151134457776363,11
-TN,0.0271,0.9729,Tennessee,Tennessee,AP,-14,Johnson,Blackburn,,R,R,"$5,069,007.82","$9,327,125.46",0.35,-10,10.79,16.19,16.19,0.98,Gloria Johnson,Marsha Blackburn,-14,-19.468814630741317,0.5773502691896257,3
-RI,0.8909,0.1091,Rhode Island,Rhode Island,NE,8,Whitehouse,a Republican,,D,D,"$3,923,247.96","$202,538.29",0.95,29,23.11,6.51,6.51,1.26,Sheldon Whitehouse,a Republican,8,9.889896980430294,1.0,0
-PA,0.7562,0.2438,Pennsylvania,Pennsylvania,ATLANTIC,-2,Casey,McCormick,,D,D,"$25,092,746.81","$18,063,786.95",0.58,5,13.12,6.52,6.52,0.97,Bob Casey,Davic McCormick,-2,6.435060824009963,0.1796053020267749,31
-OH,0.6159,0.3841,Ohio,Ohio,MW,-6,Brown,Moreno,,D,D,"$45,996,058.10","$15,822,576.22",0.74,16,6.82,4.22,4.22,1.02,Sherrod Brown,Bernie Moreno,-6,2.989632070679421,0.408248290463863,6
-ND,0.0079,0.9921,North Dakota,North Dakota,PLAINS,-20,Christiansen,Cramer,,R,R,"$1,154,175.19","$4,408,478.34",0.21,-19,-10.9,0.5,0.5,1.11,Katrina Christiansen,Kevin Cramer,-20,-23.87792561398861,0.7071067811865476,2
-NY,0.9893,0.0107,New York,New York,NE,10,Gillibrand,Sapraicone,,D,D,"$7,814,243.06","$758,861.91",0.91,27,34.0,15.4,15.4,0.96,Kirsten Gillibrand,Mike Sapraicone,10,23.604169991390826,0.7071067811865476,2
-NM,0.8531,0.1469,New Mexico,New Mexico,SW,3,Heinrich,Domenchi,,D,D,"$7,686,354.06","$3,623,274.73",0.68,12,23.56,11.96,11.96,1.09,Martin Heinrich,Nella Domenchi,3,9.032614871537785,0.37796447300922725,7
-NJ,0.7493,0.2507,New Jersey,New Jersey,NE,6,Kim,Bashaw,,N,D,"$8,995,242.41","$2,667,084.49",0.77,18,,,,1.04,Andy Kim,Curtis Bashaw,6,5.34853114642062,1.0,1
-NV,0.8445,0.1555,Nevada,Nevada,SW,-1,Rosen,Brown,,D,D,"$23,647,713.87","$9,719,083.36",0.71,13,5.03,-2.57,2.57,1.08,Jacky Rosen,Sam Brown,-1,9.775877847950524,0.25,16
-NE-S,0.0,1.0,Nebraska*,Nebraska,PLAINS,-13,Love Jr.,Ricketts,,N,R,"$164,288.27","$4,294,714.53",0.04,-30,,,,1.02,Preston Love Jr,Pete Ricketts,-13,-14.35789828330459,1.0,1
-NE,0.1658,0.8342,Nebraska,Nebraska,PLAINS,-13,Osborn,Fischer,,R,R,"$1,645,585.33","$4,131,180.65",0.28,-14,-19.07,,,1.02,Dan Osborn,Deb Fischer,-13,-5.959898283304588,0.4472135954999579,5
-MT,0.3029,0.6971,Montana,Montana,PLAINS,-11,Tester,Sheey,,D,D,"$39,279,203.20","$14,065,647.85",0.74,15,3.55,5.95,5.95,1.05,Jon Tester,Tim Sheey,-11,-5.9069799674013606,0.37796447300922725,7
-MO,0.1568,0.8432,Missouri,Missouri,SOUTH,-10,Kunce,Hawley,,R,R,"$11,193,778.19","$8,833,286.77",0.56,4,-5.81,-4.41,4.41,1.01,Lucas Kunce,Hawley,-10,-8.263401244074874,0.5,4
-MS,0.1104,0.8896,Mississippi,Mississippi,SOUTH,-11,Pinkins,Wickers,,R,R,"$499,333.52","$6,180,808.68",0.07,-28,-19.02,-16.62,16.62,0.79,Ty Pinkins,Roger Wickers,-11,-9.763515957347241,1.0,0
-MN,0.8534,0.1466,Minnesota,Minnesota,MW,1,Klobuchar,White,,D,D,"$11,833,516.79","$132,721.45",0.99,32,24.1,14.5,14.5,1.01,Amy Klobuchar,Royce White,1,8.40594827440132,0.408248290463863,6
-MI,0.6878,0.3122,Michigan,Michigan,MW,-1,Slotkin,Rogers,,N,D,"$24,083,670.99","$5,364,155.31",0.82,21,,,,1.03,Elissa Slotkin,Mike Rogers,-1,4.9455594696167084,0.2182178902359924,21
-MA,0.9937,0.0063,Massachusetts,Massachusetts,NE,15,Warren,a Republican,,D,D,"$6,437,297.39","$1,690,410.94",0.79,19,24.17,0.57,0.57,1.17,Warren,a Republican,15,26.067558480493894,1.0,1
-MD,0.799,0.201,Maryland,Maryland,ATLANTIC,14,Alsobrooks,Hogan,,N,D,"$12,473,586.36","$7,003,571.12",0.64,9,,,,0.87,Alsobrooks,Hogan,14,4.364868264000975,0.5773502691896257,3
-ME,0.9037,0.0963,Maine,Maine,NE,2,King,Kouzounas,,D,D,"$4,334,301.57","$503,997.75",0.9,26,34.55,23.95,23.95,1.17,Angus King,Demitroula Kouzounas,2,12.532711480430233,0.5773502691896257,3
-IN,0.1515,0.8485,Indiana,Indiana,MW,-11,McCray,Banks,,N,R,"$61,506.88","$5,553,816.16",0.01,-32,19.08,21.48,21.48,1.0,McCray,Jim Banks,-11,-9.389788257877418,1.0,0
-HI,0.9668,0.0332,Hawaii,Hawaii,PACIFIC,14,Hirono,McDermott,,D,D,"$2,632,701.55","$20,265.02",0.99,32,42.3,19.7,19.7,1.15,Hirono,Bob McDermott,14,15.716360449180451,1.0,0
-FL,0.3031,0.6969,Florida,Florida,SOUTH,-3,Mucarsel-Powell,Scott,,R,R,"$14,373,409.59","$20,172,885.18",0.42,-5,-0.12,-5.72,5.72,1.04,Debbie Mucarsel-Powell,Scott,-3,-3.3731573030327917,0.28867513459481287,12
-DE,0.8303,0.1697,Delaware,Delaware,ATLANTIC,7,Rochester,,,N,D,"$6,971,100.74","$940,060.03",0.88,25,,,,0.9,Blunt Rochester,,7,8.276586603283459,1.0,0
-CT,0.8718,0.1282,Connecticut,Connecticut,NE,7,Murphy,Corey,,D,D,"$10,747,154.08","$62,764.85",0.99,32,20.18,4.58,4.58,1.09,Murphy,Matthew Corey,7,8.685936920939223,1.0,0
-CA,0.983,0.017,California,California,PACIFIC,13,Schiff,Garvey,,N,D,"$39,349,181.28","$10,968,989.61",0.78,18,,,,0.96,Adam Schiff,Steve Garvey,13,22.024462361787343,0.5,4
-AZ,0.6902,0.3098,Arizona,Arizona,SW,-2,Gallego,Lake,,N,D,"$32,349,689.55","$10,371,230.00",0.76,17,,,,1.07,Gallego,Lake,-2,5.767355936121907,0.20851441405707477,23
+TX,0.3114,0.6886,Texas,Texas,SOUTH,-5,Allred,Cruz,,R,R,"$38,433,747.58","$26,095,586.59",0.6,6,-2.56,-6.16,6.16,1.02,Colin Allred,Ted Cruz,-5,-3.07740836531476,0.30151134457776363,11
+TN,0.0268,0.9732,Tennessee,Tennessee,AP,-14,Johnson,Blackburn,,R,R,"$5,069,007.82","$9,327,125.46",0.35,-10,10.79,16.19,16.19,0.98,Gloria Johnson,Marsha Blackburn,-14,-19.5525214285452,0.5773502691896257,3
+RI,0.9031,0.0969,Rhode Island,Rhode Island,NE,8,Whitehouse,a Republican,,D,D,"$3,923,247.96","$202,538.29",0.95,29,23.11,6.51,6.51,1.26,Sheldon Whitehouse,a Republican,8,10.806914712369254,1.0,0
+PA,0.7455,0.2545,Pennsylvania,Pennsylvania,ATLANTIC,-2,Casey,McCormick,,D,D,"$25,092,746.81","$18,063,786.95",0.58,5,13.12,6.52,6.52,0.97,Bob Casey,Davic McCormick,-2,5.920038527072042,0.1767766952966369,32
+OH,0.6424,0.3576,Ohio,Ohio,MW,-6,Brown,Moreno,,D,D,"$45,996,058.10","$15,822,576.22",0.74,16,6.82,4.22,4.22,1.02,Sherrod Brown,Bernie Moreno,-6,3.203127937188404,0.408248290463863,6
+ND,0.007,0.993,North Dakota,North Dakota,PLAINS,-20,Christiansen,Cramer,,R,R,"$1,154,175.19","$4,408,478.34",0.21,-19,-10.9,0.5,0.5,1.11,Katrina Christiansen,Kevin Cramer,-20,-23.950148238858976,0.7071067811865476,2
+NY,0.9904,0.0096,New York,New York,NE,10,Gillibrand,Sapraicone,,D,D,"$7,814,243.06","$758,861.91",0.91,27,34.0,15.4,15.4,0.96,Kirsten Gillibrand,Mike Sapraicone,10,23.600912911701283,0.7071067811865476,2
+NM,0.8606,0.1394,New Mexico,New Mexico,SW,3,Heinrich,Domenchi,,D,D,"$7,686,354.06","$3,623,274.73",0.68,12,23.56,11.96,11.96,1.09,Martin Heinrich,Nella Domenchi,3,9.008024858878944,0.37796447300922725,7
+NJ,0.7457,0.2543,New Jersey,New Jersey,NE,6,Kim,Bashaw,,N,D,"$8,995,242.41","$2,667,084.49",0.77,18,,,,1.04,Andy Kim,Curtis Bashaw,6,5.357365055673131,1.0,1
+NV,0.8448,0.1552,Nevada,Nevada,SW,-1,Rosen,Brown,,D,D,"$23,647,713.87","$9,719,083.36",0.71,13,5.03,-2.57,2.57,1.08,Jacky Rosen,Sam Brown,-1,9.754399593710389,0.25,16
+NE-S,0.0,1.0,Nebraska*,Nebraska,PLAINS,-13,Love Jr.,Ricketts,,N,R,"$164,288.27","$4,294,714.53",0.04,-30,,,,1.02,Preston Love Jr,Pete Ricketts,-13,-14.46994651068487,1.0,1
+NE,0.1656,0.8344,Nebraska,Nebraska,PLAINS,-13,Osborn,Fischer,,R,R,"$1,645,585.33","$4,131,180.65",0.28,-14,-19.07,,,1.02,Dan Osborn,Deb Fischer,-13,-6.24294651068487,0.4472135954999579,5
+MT,0.3161,0.6839,Montana,Montana,PLAINS,-11,Tester,Sheey,,D,D,"$39,279,203.20","$14,065,647.85",0.74,15,3.55,5.95,5.95,1.05,Jon Tester,Tim Sheey,-11,-5.878116073726499,0.37796447300922725,7
+MO,0.1681,0.8319,Missouri,Missouri,SOUTH,-10,Kunce,Hawley,,R,R,"$11,193,778.19","$8,833,286.77",0.56,4,-5.81,-4.41,4.41,1.01,Lucas Kunce,Hawley,-10,-7.218941265514026,0.408248290463863,6
+MS,0.1238,0.8762,Mississippi,Mississippi,SOUTH,-11,Pinkins,Wickers,,R,R,"$499,333.52","$6,180,808.68",0.07,-28,-19.02,-16.62,16.62,0.79,Ty Pinkins,Roger Wickers,-11,-9.192592957760068,1.0,0
+MN,0.8492,0.1508,Minnesota,Minnesota,MW,1,Klobuchar,White,,D,D,"$11,833,516.79","$132,721.45",0.99,32,24.1,14.5,14.5,1.01,Amy Klobuchar,Royce White,1,8.304900163652897,0.408248290463863,6
+MI,0.6974,0.3026,Michigan,Michigan,MW,-1,Slotkin,Rogers,,N,D,"$24,083,670.99","$5,364,155.31",0.82,21,,,,1.03,Elissa Slotkin,Mike Rogers,-1,5.116888903265908,0.2182178902359924,21
+MA,0.9947,0.0053,Massachusetts,Massachusetts,NE,15,Warren,a Republican,,D,D,"$6,437,297.39","$1,690,410.94",0.79,19,24.17,0.57,0.57,1.17,Warren,a Republican,15,26.0784493715131,1.0,1
+MD,0.8286,0.1714,Maryland,Maryland,ATLANTIC,14,Alsobrooks,Hogan,,N,D,"$12,473,586.36","$7,003,571.12",0.64,9,,,,0.87,Alsobrooks,Hogan,14,5.73052290281041,0.5,4
+ME,0.9048,0.0952,Maine,Maine,NE,2,King,Kouzounas,,D,D,"$4,334,301.57","$503,997.75",0.9,26,34.55,23.95,23.95,1.17,Angus King,Demitroula Kouzounas,2,12.442906210922224,0.5773502691896257,3
+IN,0.089,0.911,Indiana,Indiana,MW,-11,McCray,Banks,,N,R,"$61,506.88","$5,553,816.16",0.01,-32,19.08,21.48,21.48,1.0,McCray,Jim Banks,-11,-13.325860741889306,1.0,1
+HI,0.9736,0.0264,Hawaii,Hawaii,PACIFIC,14,Hirono,McDermott,,D,D,"$2,632,701.55","$20,265.02",0.99,32,42.3,19.7,19.7,1.15,Hirono,Bob McDermott,14,16.56279461863352,1.0,0
+FL,0.2996,0.7004,Florida,Florida,SOUTH,-3,Mucarsel-Powell,Scott,,R,R,"$14,373,409.59","$20,172,885.18",0.42,-5,-0.12,-5.72,5.72,1.04,Debbie Mucarsel-Powell,Scott,-3,-3.815494011387911,0.28867513459481287,12
+DE,0.8323,0.1677,Delaware,Delaware,ATLANTIC,7,Rochester,,,N,D,"$6,971,100.74","$940,060.03",0.88,25,,,,0.9,Blunt Rochester,,7,8.893582343779974,1.0,0
+CT,0.8842,0.1158,Connecticut,Connecticut,NE,7,Murphy,Corey,,D,D,"$10,747,154.08","$62,764.85",0.99,32,20.18,4.58,4.58,1.09,Murphy,Matthew Corey,7,9.478659508206215,1.0,0
+CA,0.9889,0.0111,California,California,PACIFIC,13,Schiff,Garvey,,N,D,"$39,349,181.28","$10,968,989.61",0.78,18,,,,0.96,Adam Schiff,Steve Garvey,13,22.788900353069838,0.5,4
+AZ,0.6954,0.3046,Arizona,Arizona,SW,-2,Gallego,Lake,,N,D,"$32,349,689.55","$10,371,230.00",0.76,17,,,,1.07,Gallego,Lake,-2,5.723678730368463,0.20851441405707477,23
