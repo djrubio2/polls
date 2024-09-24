@@ -8,7 +8,6 @@
 
         body {
             font-family: 'Arimo', sans-serif;
-
         }
 
         #update {
@@ -38,6 +37,8 @@
             border: 2px solid black;
             padding:5px;
             height: 100px;
+            width: 100%;
+            position: relative;
 
         }
 
@@ -74,14 +75,18 @@
         }
         #majority-label{
             position: absolute;
+            font-family: 'Inconsolata';
             text-align: left;
             width: auto;
+            font-weight: bold;
 
         }
 
 
         #map-container {
-            width: 95%;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .tooltip {
@@ -256,6 +261,19 @@
         #rVote {
             color: #ff352c;
         }
+        @media only screen and (max-width: 600px) {
+  #chart{
+    overflow: scroll;
+    background-color: #e5e3e3;
+  }
+  .block{
+    outline: 1px solid #e5e3e3;
+    transform: scale(2);
+  }
+  #map-container {
+            width: 100%;
+        }
+}
     </style>
 </head>
 
@@ -520,8 +538,7 @@
 
             // Set up SVG container
             const chart = d3.select("#chart")
-                .style("position", "relative")
-                .style("width", "100%");
+       
 
             // Create blocks for each state
             let accumulatedVotes = 0;

@@ -78,8 +78,11 @@
 
 
         #map-container {
-            width: 95%;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
         }
+
 
         .tooltip {
             position: absolute;
@@ -280,6 +283,19 @@
         #rVote {
             color: #ff352c;
         }
+        @media only screen and (max-width: 600px) {
+  #chart{
+    overflow: scroll;
+    background-color: #e5e3e3;
+  }
+  .block{
+    outline: 1px solid #e5e3e3;
+    transform: scale(2);
+  }
+  #map-container {
+            width: 100%;
+        }
+}
     </style>
 </head>
 
@@ -332,11 +348,11 @@
 
     </div>
     <div>
-        <div style="height:50px;width:28%; background-color:#2798da;display: inline-block; float:left;"></div>
+        <div style="height:50px;width:28%; background-color:#2798da;display: inline-block; float:left;color:white;text-align: center;">28 seats not up</div>
         <div id="chart">
             <div id="majority-label">50</div>
         </div>
-        <div style="height:50px;width:38%; background-color:#ff352c;display: inline-block; float:right;"></div>
+        <div style="height:50px;width:38%; background-color:#ff352c;display: inline-block; float:right;">38 seats not up</div>
         <br>
     </div>
     <div>
