@@ -8,6 +8,7 @@
 
         body {
             font-family: 'Arimo', sans-serif;
+            background-color: whitesmoke;
         }
 
         #update {
@@ -21,7 +22,6 @@
         #map-holder {
             padding-top: 50px;
             padding-bottom: 50px;
-
         }
         g{
             user-select: none;
@@ -34,17 +34,18 @@
             border: 1px solid black;
         }
         #chart{
-            border: 2px solid black;
-            padding:5px;
+       
+
+        }
+
+        #chart-wrapper{
             height: 100px;
             width: 100%;
             position: relative;
-
         }
 
         .block {
             font-family: 'Inconsolata', sans-serif;
-
             display: inline-block;
             height: 50px;
             margin: 0px;
@@ -64,14 +65,14 @@
             outline: 2px solid black;
             z-index: 1;
             opacity: .8;
-
         }
 
         .tick {
-            position: absolute;
+            position:absolute;
             border: 1px solid black;
-            height: 23px;
-            top: 55px;
+            height: 20px;
+            top: 18px;
+            width: 0;
         }
         #majority-label{
             position: absolute;
@@ -101,6 +102,7 @@
             color: black;
             border-radius: 0px;
             pointer-events: none;
+            z-index: 1;
         }
 
         #EV {
@@ -146,6 +148,14 @@
             padding: 0px;
             padding-bottom: 10px;
             box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.95);
+        }
+
+        .window{
+            border: 3px solid #292929;
+            padding-left: 5px;
+            padding-right: 5px;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.95);
+
         }
 
         #toplineD,
@@ -217,7 +227,7 @@
         }
 
         td {
-            border-bottom: 1px solid rgb(34, 34, 34);
+            border-top: 1px solid rgb(34, 34, 34);
             font-family: 'Inconsolata';
 
         }
@@ -233,7 +243,6 @@
 
         th {
             font-family: 'Arimo';
-            background-color: #ffffff;
             border-bottom: 2px solid rgb(34, 34, 34);
         }
 
@@ -263,21 +272,39 @@
         }
         @media only screen and (max-width: 600px) {
   #chart{
-    overflow: scroll;
-    background-color: #e5e3e3;
+    width: 200%;
+    right:50%;
+    position:relative;
+
   }
+  #chart-wrapper{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+  }
+  .tick{
+    position: relative;
+    top: -50px;
+  }
+  #majority-label{
+    position: relative;
+
+  }
+  
+
   .block{
-    outline: 1px solid #e5e3e3;
-    transform: scale(2);
   }
   #map-container {
             width: 100%;
         }
+
 }
     </style>
 </head>
 
 <body>
+
     <div id="container">
         <div id="topline">
             <div id="top-container">
@@ -318,23 +345,35 @@
                 </div>
             </div>
         </div>
+        
     </div>
     <div id="tools"></div>
+
     <div id="map-holder">
         <div id="map-container"></div>
 
     </div>
+
+    <div class="window">
+        <h2>Electoral College</h3>
+    <div id="chart-wrapper">
+
     <div id="chart">
+
         <div  id="majority-label">270</div>
         <br>
     </div>
-    <div>
+</div>
+    
+    </div>
+    <br>
+
+    <div class="window">
         <h2>Estimated popular vote:</h2>
         <table>
             <thead>
                 <th>Candidate</th>
                 <th>Est. Vote</th>
-
             </thead>
             <tr>
                 <td>
@@ -356,13 +395,19 @@
             </tr>
         </table>
     </div>
-    <hr>
 
+    <br>
+<div class="window">
 <h2>Tossups</h2>
 <div id="close-margins-table"></div>
+</div>
+<br>
 
+<div class="window">
 <h2>All Other States</h2>
 <div id="other-states-table"></div>
+</div>
+</div>
 </body>
 
 <script>
@@ -599,7 +644,6 @@
                     }
                     return "0%";
                 })
-                .style("top", "23px")
                 .style("height", "50px")
                 .text("");
 
