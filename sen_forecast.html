@@ -49,7 +49,7 @@
             line-height: 50px;
             border-radius: 0px;
             color: black;
-            outline: 1px solid rgb(255, 255, 255);
+            outline: 1px solid #292929;
             z-index: 0;
 
         }
@@ -73,6 +73,8 @@
             position: absolute;
             text-align: left;
             width: auto;
+            font-family: 'Inconsolata',monospace;
+            font-weight: bold;
 
         }
 
@@ -169,6 +171,17 @@
                     #f5f5f5 10px);
             float: left;
         }
+        .window{
+            border: 3px solid #292929;
+            padding-left: 5px;
+            padding-right: 5px;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.95);
+        }
+        #seat-container{
+            border: 3px solid #292929;
+            box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.95);
+        }
+
 
         #tieDemProb {
             width: 0%;
@@ -218,6 +231,15 @@
             font-weight: bold;
 
         }
+        .notup{
+            display: inline-block;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    color:white;
+    font-family: 'Inconsolata',monospace;
+
+        }
 
         .party_box {
             height: 15px;
@@ -239,7 +261,7 @@
         }
 
         td {
-            border-bottom: 1px solid rgb(34, 34, 34);
+            border-top: 1px solid rgb(34, 34, 34);
             font-family: 'Inconsolata';
 
         }
@@ -289,9 +311,9 @@
     background-color: #e5e3e3;
   }
   .block{
-    outline: 1px solid #e5e3e3;
-    transform: scale(2);
+    color:rgba(255, 255, 255, 0);
   }
+
   #map-container {
             width: 100%;
         }
@@ -347,49 +369,27 @@
         <div id="map-container"></div>
 
     </div>
-    <div>
-        <div style="height:50px;width:28%; background-color:#2798da;display: inline-block; float:left;color:white;text-align: center;">28 seats not up</div>
+
+
+    <div id="seat-container">
+        <div class="notup" style="width:28%; background-color:#2798da; float:left; color:white;text-align:center;">28 seats not up</div>
         <div id="chart">
             <div id="majority-label">50</div>
         </div>
-        <div style="height:50px;width:38%; background-color:#ff352c;display: inline-block; float:right;">38 seats not up</div>
+        <div class="notup" style="width:38%; background-color:#ff352c;display: inline-block; float:right;">38 seats not up</div>
         <br>
     </div>
-    <div>
-        <h2>Estimated popular vote:</h2>
-        <table>
-            <thead>
-                <th>Candidate</th>
-                <th>Est. Vote</th>
-
-            </thead>
-            <tr>
-                <td>
-                    <div class="party_box" style="background-color: #2798da;"></div> Dems
-                </td>
-                <td id="d_vote"></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="party_box" style="background-color: #ff352c;"></div> GOP
-                </td>
-                <td id="r_vote"></td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="party_box"></div> Other
-                </td>
-                <td id="i_vote"></td>
-            </tr>
-        </table>
-    </div>
-    <hr>
-
-    <h2>Tossups</h2>
+    <br>
+<div class="window">
+    <h2>Key Races</h2>
     <div id="close-margins-table"></div>
+</div>
+<br>
+<div class="window">
 
     <h2>All Other States</h2>
     <div id="other-states-table"></div>
+    </div>
 </body>
 
 <script>
@@ -499,8 +499,8 @@
 
 
     d3.csv("senate_state_probs.csv").then(function (data) {
-        const closeMargins = data.filter(d => +d.dem_prob > .4 && +d.dem_prob < .6);
-        const otherStates = data.filter(d => +d.dem_prob < .4 || +d.dem_prob > .6);
+        const closeMargins = data.filter(d => +d.dem_prob > .25 && +d.dem_prob < .75);
+        const otherStates = data.filter(d => +d.dem_prob < .25 || +d.dem_prob > .75);
 
         d3.selectAll("path.seat")
             .attr("fill", "red");
@@ -535,7 +535,7 @@
 
 
                 rows.selectAll("td")
-                    .data(d => [d.StateName, d.Expected, d.dem_prob, d.gop_prob])
+                    .data(d => [d.StateName, d['Final Margin'], d.dem_prob, d.gop_prob])
                     .join("td")
                     .text((d, i) => {
                         if (i == 1) {
@@ -632,13 +632,6 @@
                     return colorScale(value);
                 })
                 .attr("title", d => d.State + ": " + d.ev + " EVs")
-                .text(d => {
-                    if (d.ev < 7) {
-
-                    } else {
-                        return d.State
-                    }
-                })
                 .each(function (d) {
                     accumulatedVotes += 1;
                     d.accumulatedVotes = accumulatedVotes;
