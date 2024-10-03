@@ -45,7 +45,7 @@
             vertical-align: top;
             text-align: center;
             color: white;
-            font-size: 12px;
+            font-size: 12pt;
             line-height: 50px;
             border-radius: 0px;
             color: black;
@@ -55,9 +55,10 @@
         }
 
         .block:hover {
-            outline: 2px solid black;
+            outline: 2px solid rgb(255, 255, 255);
             z-index: 1;
-            opacity: .8;
+            opacity: .9;
+            fill-opacity: 1;
 
         }
 
@@ -89,7 +90,7 @@
         .tooltip {
             position: absolute;
             text-align: center;
-            width: 150px;
+            width: 175px;
             height: 125px;
             padding: 5px;
             background: #ffffff;
@@ -98,6 +99,7 @@
             color: black;
             border-radius: 0px;
             pointer-events: none;
+            z-index: 3;
         }
 
         #EV {
@@ -277,7 +279,6 @@
 
         th {
             font-family: 'Arimo';
-            background-color: #ffffff;
             border-bottom: 2px solid rgb(34, 34, 34);
         }
 
@@ -316,6 +317,9 @@
 
   #map-container {
             width: 100%;
+        }
+        .notup{
+            font-size:10pt;
         }
 }
     </style>
